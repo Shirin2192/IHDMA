@@ -243,9 +243,6 @@ class Website extends CI_Controller {
 		}else{
 			$this->load->view('dashboard');
 		}
-		// Load the dashboard view
-
-		
 	}
 	public function about() {
 		$this->load->view('about');
