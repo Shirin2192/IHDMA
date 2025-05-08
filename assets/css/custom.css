@@ -1,0 +1,576 @@
+/* Breadcrumb */
+.breadcrumb-area {
+    background: #f5f5f5;
+}
+
+.breadcrumb-area-wrapper h1.title {
+    font-size: 64px;
+}
+.breadcrumb-area h5{
+    color: var(--color-primary);
+}
+
+
+/* heading rounder */
+.title-wrapper-left .pre {
+    border-radius: 30px;
+    padding: 5px 16px;
+    color: #242424;
+    margin-bottom: 20px;
+    display: block;
+    max-width: max-content;
+    border: 1px solid rgb(220 240 221);
+    background: #94d29952;
+    font-size: 20px;
+}
+
+.title-wrapper-left .title {
+    text-align: left;
+    font-size: 48px;
+}
+
+.title-wrapper-center {
+    text-align: center;
+}
+
+.title-wrapper-center .pre {
+    border-radius: 30px;
+    padding: 5px 16px;
+    color: #242424;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    max-width: max-content;
+    margin: auto;
+    border: 1px solid rgb(220 240 221);
+    background: #94d29952;
+}
+
+.userform .modal-header h6{
+    color: var(--color-primary);
+}
+/* Homepage */
+
+/* Banner section */
+.banner-section .banner-wrapper-bg {
+    background-image: url(../images/banner/banner.webp);
+}
+
+.banner-section.banner-wrapper-bg.bg-2-banner-2 {
+    background-image: url(../images/banner/banner2.webp);
+}
+
+.banner-section .banner-wrapper-bg.bg-2-banner-3 {
+    background-image: url(../images/banner/banner3.webp);
+}
+
+.banner-content-area .pre-title span {
+    color: #242424;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+.about-us-section .about-image-left-wrapper {
+    position: relative;
+    margin-right: -30px;
+}
+
+.about-us-section .about-image-left-wrapper .review-area {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px 0 0 0;
+}
+
+.about-us-section .about-image-left-wrapper .review-area .stars-area {
+    margin-top: 13px;
+}
+
+.about-us-section .about-image-left-wrapper .review-area .stars-area .content span {
+    font-size: 18px;
+    color: #242424;
+    font-weight: 500;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0;
+    background: #FFBA77;
+}
+
+.marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+    font-size: 20px;
+    padding: 0 2rem;
+    color: #242424;
+    display: inline-block;
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.service-section .single-service-area {
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
+    height: 100%;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.service-section .single-service-area .icon {
+    margin-bottom: 18px;
+}
+
+.service-section .single-service-area .title {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.service-section .single-service-area p {
+    font-size: 16px;
+    margin-bottom: 16px;
+    min-height: 180px;
+}
+
+.service-section .single-service-area:hover {
+    border: 1px solid var(--color-primary);
+}
+
+
+.general-section .single-short-service {
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
+}
+
+.general-section .single-short-service .title {
+    font-size: 18px;
+}
+
+.general-section .warning-btn {
+    background: #f44336;
+}
+
+.general-section .warning-btn:hover {
+    background: #f44336;
+}
+
+.consumerwaring .modal-content {
+    border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+    padding: 20px;
+}
+
+
+.membership-section .single-pricing-area {
+    border-radius: 15px;
+    padding: 40px 40px;
+    background: #94d29952;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    min-height: 435px;
+}
+
+.membership-section .single-pricing-area .title1 {
+    color: #fff;
+}
+
+.membership-section .single-pricing-area .title {
+    font-size: 20px;
+}
+
+.membership-section .single-pricing-area .pricing-head {
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 30px;
+}
+
+.membership-section .single-pricing-area .pricing-head .price1 {
+    color: #fff !important;
+
+}
+
+.membership-section .single-pricing-area .pricing-head span {
+    color: #111111;
+}
+
+.membership-section .single-pricing-area .pricing-head .price {
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+.membership-section .single-pricing-area .pricing-head p {
+    color: #1f1f1f;
+    margin-bottom: 20px;
+}
+
+.membership-section .single-pricing-area .body p {
+    font-size: 16px;
+}
+
+.membership-section .single-pricing-area .single-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.membership-section .single-pricing-area .single-check i {
+    color: var(--color-primary);
+}
+
+.membership-section .single-pricing-area .rts-btn {
+    margin-top: 30px;
+}
+
+.membership-section .single-pricing-area.active {
+    background: #f49124;
+}
+
+.membership-section .single-pricing-area.active h2,
+.membership-section .single-pricing-area.active p,
+.membership-section .single-pricing-area.active span {
+    color: #fff !important;
+}
+
+.membership-section .single-pricing-area.active i {
+    color: #fff;
+}
+
+.membership-section .single-pricing-area.active .rts-btn {
+    border: 1px solid #fff;
+}
+
+.corporate-members .single-branch {
+    background: #fff;
+    border-radius: 15px;
+    display: block;
+    overflow: hidden;
+    min-height: 315px;
+    border: 1px solid #ebebeb;
+}
+
+.corporate-members .single-branch .inner-content {
+    padding: 20px;
+}
+
+.corporate-members .single-branch .inner-content .title {
+    font-size: 16px;
+    transition: 0.3s;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+
+/* Aboutus page */
+
+.objective-section .objective-area {
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
+    height: 100%;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.objective-section .objective-area:hover {
+    border: 1px solid var(--color-primary);
+}
+
+.team-section .title-between-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.team-section .title-wrapper-left .title {
+    text-align: left;
+    font-size: 48px;
+}
+
+.team-section .title-between-areas {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.team-section .title-between-areas p {
+    max-width: 520px;
+    font-size: 18px;
+}
+
+.team-section .title-between-areas p {
+    max-width: 520px;
+    font-size: 18px;
+}
+
+
+/* Benefits of Membership page */
+
+.benefits-section .benefits-area {
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
+    height: 100%;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.benefits-section .benefits-area:hover {
+    border: 1px solid var(--color-primary);
+}
+
+.activities-section .activities-area {
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
+    height: 100%;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.activities-section .activities-area:hover {
+    border: 1px solid var(--color-primary);
+}
+
+
+.benefits-section .single-card .single-card-details .top {
+    padding: 30px;
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+.benefits-section .single-card .single-card-details .top h5 {
+    color: #fff;
+}
+
+.benefits-section .single-card .single-card-details .top p {
+    margin-bottom: 30px;
+}
+
+.benefits-section .single-card .single-card-details .top .rts-btn {
+    border: 1px solid #fff;
+}
+
+.single-rightsidebar-single .doctor-title-table .top .rts-btn:hover {
+    border: 1px solid transparent;
+}
+
+
+/* Join IHDMA page */
+
+/* individual-membership */
+
+.individual-membership-details .single-pricing-area {
+    border-radius: 15px;
+    padding: 40px 40px;
+    background: #94d29952;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    min-height: 385px !important;
+}
+
+
+.individual-membership-details .single-pricing-area .title {
+    font-size: 20px;
+}
+
+.individual-membership-details .single-pricing-area .pricing-head {
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 30px;
+}
+
+
+.individual-membership-details .single-pricing-area .pricing-head .price {
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+
+.individual-membership-details .single-pricing-area .body p {
+    font-size: 16px;
+}
+
+
+.individual-membership-details .single-pricing-area .rts-btn {
+    margin-top: 30px;
+}
+
+.corporate-membership-details .single-pricing-area {
+    border-radius: 15px;
+    padding: 40px 40px;
+    background: #94d29952;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    min-height: 385px !important;
+}
+
+
+.corporate-membership-details .single-pricing-area .title {
+    font-size: 20px;
+}
+
+.corporate-membership-details .single-pricing-area .pricing-head {
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 30px;
+}
+
+
+.corporate-membership-details .single-pricing-area .pricing-head .price {
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+
+.corporate-membership-details .single-pricing-area .body p {
+    font-size: 16px;
+}
+
+
+.corporate-membership-details .single-pricing-area .rts-btn {
+    margin-top: 30px;
+}
+
+
+.login-section .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+}
+.login-section .container{
+    max-width: 60%;
+}
+.login-section .login-box{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
+    padding: 25px;
+}
+.login-section .required{
+    color: red;
+}
+
+.infoswitch {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    text-align: left;
+}
+.switch-field {
+    display: flex;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.switch-field label {
+    background-color: #ffffff;
+    color: #F49124;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 10px;
+    margin-right: -1px;
+    border: 1px solid #F49124;
+    transition: all 0.1s ease-in-out;
+    text-transform: uppercase;
+}
+
+.switch-field input:checked + label {
+    background-color: #F49124;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.infoswitch .form-check-label{
+    font-size: 14px;
+}
+
+
+.customRadio input[type="radio"]+label {
+    position: relative;
+    padding: 4px 10px 0 23px;
+    cursor: pointer;
+  }
+  
+  .radiolabel label {
+    color: #636363;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding: 3px 20px;
+    padding-left: 28px;
+    margin-right: 10px;
+  }
+  .customRadio input[type="radio"]+label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #F49124;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+  .customRadio input[type="radio"]+label:after {
+    content: '';
+    background: #F49124;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 9px;
+    left: 5px;
+    opacity: 0;
+    transform: scale(2);
+    transition: transform 0.3s linear, opacity 0.3s linear;
+  }
+  .customRadio input[type="radio"] {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+  }
+  .customRadio input[type="radio"]:checked+label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
