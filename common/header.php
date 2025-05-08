@@ -13,7 +13,7 @@
          <div class="container">
              <div class="header-top-two">
                  <div class="logo w-25">
-                     <a href="index.php" class="logo">
+                     <a href="<?= base_url()?>" class="logo">
                          <img src="<?= base_url()?>assets/images/logo/logo.png" class="" alt="logo_area">
                      </a>
                  </div>

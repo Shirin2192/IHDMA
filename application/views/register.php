@@ -8,12 +8,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url();?>assets/images/logo/favicon.png">
     <title>Indian Hyperbaric and Diving Medicine Association</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/plugins/plugins.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/plugins/magnifying-popup.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css" integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <?php include 'common/css_files.php'; ?>
+   
 
 </head>
 
@@ -21,7 +17,7 @@
 
 
     <!-- Header Start -->
-    <?php include 'header.php'; ?>
+    <?php include ('common/header.php'); ?>
     <!-- Header End -->
 
 
@@ -355,31 +351,18 @@
 
 
     <!-- footer Start -->
-    <?php include 'footer.php'; ?>
+    <?php include ('common/footer.php'); ?>
     <!-- footer End -->
 
 
     <!-- Mobile Header Start -->
-    <?php include 'mobile-header.php'; ?>
+    <?php include ('common/mobile-header.php'); ?>
     <!--Mobile  Header End -->
 
 
     <!-- progress area start -->
-    <?php include 'progress-bar.php'; ?>
+    <?php include ('common/progress-bar.php'); ?>
     <!-- progress area end -->
-
-
-
-    <script src="<?= base_url();?>assets/js/plugins/jquery.js"></script>
-    <script src="<?= base_url();?>assets/js/plugins/jquery-ui.js"></script>
-    <script src="<?= base_url();?>assets/js/vendor/waw.js"></script>
-    <script src="<?= base_url();?>assets/js/plugins/swiper.js"></script>
-    <script src="<?= base_url();?>assets/js/plugins/metismenu.js"></script>
-    <script src="<?= base_url();?>assets/js/plugins/jarallax.js"></script>
-    <script src="<?= base_url();?>assets/js/plugins/smooth-scroll.js"></script>
-    <script src="<?= base_url();?>assets/js/plugins/magnifying-popup.js"></script>
-    <script src="<?= base_url();?>assets/js/vendor/bootstrap.min.js"></script>
-    <script src="<?= base_url();?>assets/js/main.js"></script>
     <?php include('common/js_files.php');?>
     <script src="<?= base_url();?>assets/view_js/register.js"></script>
 
