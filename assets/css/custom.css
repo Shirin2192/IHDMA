@@ -56,7 +56,7 @@
     background-image: url(../images/banner/banner.webp);
 }
 
-.banner-section.banner-wrapper-bg.bg-2-banner-2 {
+.banner-section .banner-wrapper-bg.bg-2-banner-2 {
     background-image: url(../images/banner/banner2.webp);
 }
 

@@ -9622,12 +9622,12 @@ input[type=radio]~label::after {
 
 .form-group textarea {
   min-height: 160px;
-  border: 1px solid #615efc;
-  border-radius: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 15px;
   font-size: var(--font-size-b2);
   transition: var(--transition);
-  background-color: #F9F8FF;
+  background-color: #fff;
 }
 
 .form-group textarea:focus {

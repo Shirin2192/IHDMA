@@ -596,7 +596,7 @@
     </div>
 
     <!-- corporate member area start -->
-    <div class="corporate-members rts-section-gap">
+    <!-- <div class="corporate-members rts-section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
@@ -665,7 +665,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- corporate center area end -->
 
 
