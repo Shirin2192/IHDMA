@@ -256,4 +256,57 @@ class Website extends CI_Controller {
 	public function contact_us() {
 		$this->load->view('contactus');
 	}
+	public function submit_enquiry_form() {
+        // Set rules for validation
+        $this->form_validation->set_rules('fullname', 'Full Name', 'required|trim');
+        $this->form_validation->set_rules('phone', 'Phone Number', 'required|numeric|min_length[10]|max_length[12]');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('city', 'City', 'required');
+        $this->form_validation->set_rules('state', 'State', 'required');
+        $this->form_validation->set_rules('country', 'Country', 'required');
+        $this->form_validation->set_rules('pincode', 'Pincode', 'required|numeric|min_length[4]|max_length[6]');
+        $this->form_validation->set_rules('w3review', 'Message', 'trim');
+
+        if ($this->form_validation->run() == FALSE) {
+            // Validation failed – return errors as JSON
+            $errors = array(
+                'fullname_error' => form_error('fullname'),
+                'phone_error' => form_error('phone'),
+                'email_error' => form_error('email'),
+                'address_error' => form_error('address'),
+                'city_error' => form_error('city'),
+                'state_error' => form_error('state'),
+                'country_error' => form_error('country'),
+                'pincode_error' => form_error('pincode'),
+                'w3review_error' => form_error('w3review'),
+            );
+            echo json_encode(['status' => false, 'errors' => $errors]);
+        } else {
+			$fullname = $this->input->post('fullname');
+			$phone = $this->input->post('phone');
+			$email = $this->input->post('email');
+			$address = $this->input->post('address');
+			$city = $this->input->post('city');
+			$state = $this->input->post('state');
+			$country = $this->input->post('country');
+			$pincode = $this->input->post('pincode');
+			$message = $this->input->post('w3review');
+			$data = array(
+				'name' => $fullname,
+				'phone' => $phone,
+				'email' => $email,
+				'address' => $address,
+				'city' => $city,
+				'state' => $state,
+				'country' => $country,
+				'pincode' => $pincode,
+				'message' => $message,
+			);
+
+			$this->model->insertData('tbl_enquiries', $data);
+
+            echo json_encode(['status' => true, 'message' => 'Form submitted successfully.']);
+        }
+    }
 }

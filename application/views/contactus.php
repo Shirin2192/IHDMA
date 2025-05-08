@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
     <link rel="stylesheet" href="<?= base_url()?>assets/css/custom.css">
 </head>
+
 <body>
     <!-- Header Start -->
     <?php include 'header.php'; ?>
@@ -38,14 +39,14 @@
     <div class="contat-section rts-section-gap">
         <div class="container">
             <div class="row g-5">
-              
+
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="single-contact-information-card">
                         <div class="icon">
                             <img src="<?= base_url()?>assets/images/contact/01.png" alt="icons">
                         </div>
                         <a href="#">
-                           Mumbai
+                            Mumbai
                         </a>
                     </div>
                 </div>
@@ -55,7 +56,7 @@
                             <img src="<?= base_url()?>assets/images/contact/02.png" alt="icons">
                         </div>
                         <a href="tel:+91 99307 29923">
-                        +91 99307 29923
+                            +91 99307 29923
                         </a>
                     </div>
                 </div>
@@ -66,7 +67,7 @@
                         </div>
                         <a href="#">
                             Mon-Fri: 09:00 AM – 11:00 PM <br>
-                           
+
                         </a>
                     </div>
                 </div>
@@ -76,7 +77,7 @@
     <!-- contact us area end -->
 
 
- 
+
 
 
     <!-- google map area start -->
@@ -85,7 +86,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="gogle-map-wrapper">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8661.892214277279!2d90.39956824489762!3d23.778885832677066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77094eace8b%3A0x1cd8c2d9239b6cb7!2sMohakhali%2C%20Dhaka%201212!5e1!3m2!1sen!2sbd!4v1727956036139!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8661.892214277279!2d90.39956824489762!3d23.778885832677066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77094eace8b%3A0x1cd8c2d9239b6cb7!2sMohakhali%2C%20Dhaka%201212!5e1!3m2!1sen!2sbd!4v1727956036139!5m2!1sen!2sbd"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -98,174 +102,193 @@
         <div class="container">
             <div class="login-box">
                 <div class="login-content">
-                    <h6 class="text-center">If you have any questions about the site, please feel free to contact us. </h6>
+                    <h6 class="text-center">If you have any questions about the site, please feel free to contact us.
+                    </h6>
 
                 </div>
-                <div class="account-info mb-5">
-                    <div class="row">
-                        
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="form-label">Full Name<span class="required">*</span></label>
-                                <input class="form-control" name="fullname" id="fullname" type="text">
+                <form id="contact_form">
+                    <div class="account-info mb-5">
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="fullname">Full Name<span class="required">*</span></label>
+                                    <input class="form-control" name="fullname" id="fullname" type="text">
+                                    <small class="text-danger" id="fullname_error"></small>
+                                </div>
                             </div>
-                        </div>
-                      
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="form-label">Phone Number<span class="required">*</span></label>
-                                <input class="form-control" name="phone" id="phone" maxlength="12" type="number">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number<span class="required">*</span></label>
+                                    <input class="form-control" name="phone" id="phone" maxlength="12" type="number">
+                                    <small class="text-danger" id="phone_error"></small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="form-label">Email<span class="required">*</span></label>
-                                <input class="form-control" name="email" id="email" type="email">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Email<span class="required">*</span></label>
+                                    <input class="form-control" name="email" id="email" type="email">
+                                    <small class="text-danger" id="email_error"></small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <label for="form-label">Address<span class="required">*</span></label>
-                                <input class="form-control" name="address" id="address" type="text">
+
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="address">Address<span class="required">*</span></label>
+                                    <input class="form-control" name="address" id="address" type="text">
+                                    <small class="text-danger" id="address_error"></small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="form-label">City<span class="required">*</span></label>
-                                <input class="form-control" name="city" id="city" type="text">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="city">City<span class="required">*</span></label>
+                                    <input class="form-control" name="city" id="city" type="text">
+                                    <small class="text-danger" id="city_error"></small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="form-group">
-                                <label for="stateSelect" class="form-label"> State<span
-                                        class="required">*</span></label>
-                                <select class="form-control" id="stateSelect" name="state" required>
-                                    <option value="" disabled selected>Choose a state</option>
-                                    <option value="AP">Andhra Pradesh</option>
-                                    <option value="AR">Arunachal Pradesh</option>
-                                    <option value="AS">Assam</option>
-                                    <option value="BR">Bihar</option>
-                                    <option value="CG">Chhattisgarh</option>
-                                    <option value="GA">Goa</option>
-                                    <option value="GJ">Gujarat</option>
-                                    <option value="HR">Haryana</option>
-                                    <option value="HP">Himachal Pradesh</option>
-                                    <option value="JH">Jharkhand</option>
-                                    <option value="KA">Karnataka</option>
-                                    <option value="KL">Kerala</option>
-                                    <option value="MP">Madhya Pradesh</option>
-                                    <option value="MH">Maharashtra</option>
-                                    <option value="MN">Manipur</option>
-                                    <option value="ML">Meghalaya</option>
-                                    <option value="MZ">Mizoram</option>
-                                    <option value="NL">Nagaland</option>
-                                    <option value="OD">Odisha</option>
-                                    <option value="PB">Punjab</option>
-                                    <option value="RJ">Rajasthan</option>
-                                    <option value="SK">Sikkim</option>
-                                    <option value="TN">Tamil Nadu</option>
-                                    <option value="TS">Telangana</option>
-                                    <option value="TR">Tripura</option>
-                                    <option value="UP">Uttar Pradesh</option>
-                                    <option value="UK">Uttarakhand</option>
-                                    <option value="WB">West Bengal</option>
-                                    <option value="AN">Andaman and Nicobar Islands</option>
-                                    <option value="CH">Chandigarh</option>
-                                    <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
-                                    <option value="DL">Delhi</option>
-                                    <option value="JK">Jammu and Kashmir</option>
-                                    <option value="LA">Ladakh</option>
-                                    <option value="LD">Lakshadweep</option>
-                                    <option value="PY">Puducherry</option>
-                                </select>
+
+                            <div class="col-md-4 mb-3">
+                                <div class="form-group">
+                                    <label for="stateSelect" class="form-label">State<span
+                                            class="required">*</span></label>
+                                    <select class="form-control" id="stateSelect" name="state" required>
+                                        <option value="" disabled selected>Choose a state</option>
+                                        <option value="AP">Andhra Pradesh</option>
+                                        <option value="AR">Arunachal Pradesh</option>
+                                        <option value="AS">Assam</option>
+                                        <option value="BR">Bihar</option>
+                                        <option value="CG">Chhattisgarh</option>
+                                        <option value="GA">Goa</option>
+                                        <option value="GJ">Gujarat</option>
+                                        <option value="HR">Haryana</option>
+                                        <option value="HP">Himachal Pradesh</option>
+                                        <option value="JH">Jharkhand</option>
+                                        <option value="KA">Karnataka</option>
+                                        <option value="KL">Kerala</option>
+                                        <option value="MP">Madhya Pradesh</option>
+                                        <option value="MH">Maharashtra</option>
+                                        <option value="MN">Manipur</option>
+                                        <option value="ML">Meghalaya</option>
+                                        <option value="MZ">Mizoram</option>
+                                        <option value="NL">Nagaland</option>
+                                        <option value="OD">Odisha</option>
+                                        <option value="PB">Punjab</option>
+                                        <option value="RJ">Rajasthan</option>
+                                        <option value="SK">Sikkim</option>
+                                        <option value="TN">Tamil Nadu</option>
+                                        <option value="TS">Telangana</option>
+                                        <option value="TR">Tripura</option>
+                                        <option value="UP">Uttar Pradesh</option>
+                                        <option value="UK">Uttarakhand</option>
+                                        <option value="WB">West Bengal</option>
+                                        <option value="AN">Andaman and Nicobar Islands</option>
+                                        <option value="CH">Chandigarh</option>
+                                        <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+                                        <option value="DL">Delhi</option>
+                                        <option value="JK">Jammu and Kashmir</option>
+                                        <option value="LA">Ladakh</option>
+                                        <option value="LD">Lakshadweep</option>
+                                        <option value="PY">Puducherry</option>
+                                    </select>
+                                    <small class="text-danger" id="state_error"></small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="form-group">
-                                <label for="countrySelect" class="form-label"> Country<span
-                                        class="required">*</span></label>
-                                <select class="form-control" id="countrySelect" name="country" required>
-                                    <option value="" disabled selected>Choose a country</option>
-                                    <option value="AF">Afghanistan</option>
-                                    <option value="AL">Albania</option>
-                                    <option value="DZ">Algeria</option>
-                                    <option value="AO">Angola</option>
-                                    <option value="AR">Argentina</option>
-                                    <option value="AM">Armenia</option>
-                                    <option value="AU">Australia</option>
-                                    <option value="AT">Austria</option>
-                                    <option value="BD">Bangladesh</option>
-                                    <option value="BE">Belgium</option>
-                                    <option value="BR">Brazil</option>
-                                    <option value="CA">Canada</option>
-                                    <option value="CN">China</option>
-                                    <option value="CO">Colombia</option>
-                                    <option value="CZ">Czech Republic</option>
-                                    <option value="DK">Denmark</option>
-                                    <option value="EG">Egypt</option>
-                                    <option value="FI">Finland</option>
-                                    <option value="FR">France</option>
-                                    <option value="DE">Germany</option>
-                                    <option value="GR">Greece</option>
-                                    <option value="IN">India</option>
-                                    <option value="ID">Indonesia</option>
-                                    <option value="IR">Iran</option>
-                                    <option value="IQ">Iraq</option>
-                                    <option value="IE">Ireland</option>
-                                    <option value="IT">Italy</option>
-                                    <option value="JP">Japan</option>
-                                    <option value="KE">Kenya</option>
-                                    <option value="KR">South Korea</option>
-                                    <option value="MY">Malaysia</option>
-                                    <option value="MX">Mexico</option>
-                                    <option value="NP">Nepal</option>
-                                    <option value="NL">Netherlands</option>
-                                    <option value="NZ">New Zealand</option>
-                                    <option value="NG">Nigeria</option>
-                                    <option value="NO">Norway</option>
-                                    <option value="PK">Pakistan</option>
-                                    <option value="PH">Philippines</option>
-                                    <option value="PL">Poland</option>
-                                    <option value="PT">Portugal</option>
-                                    <option value="QA">Qatar</option>
-                                    <option value="RU">Russia</option>
-                                    <option value="SA">Saudi Arabia</option>
-                                    <option value="SG">Singapore</option>
-                                    <option value="ZA">South Africa</option>
-                                    <option value="ES">Spain</option>
-                                    <option value="LK">Sri Lanka</option>
-                                    <option value="SE">Sweden</option>
-                                    <option value="CH">Switzerland</option>
-                                    <option value="TH">Thailand</option>
-                                    <option value="TR">Turkey</option>
-                                    <option value="UA">Ukraine</option>
-                                    <option value="AE">United Arab Emirates</option>
-                                    <option value="GB">United Kingdom</option>
-                                    <option value="US">United States</option>
-                                    <option value="VN">Vietnam</option>
-                                </select>
+
+                            <div class="col-md-4 mb-3">
+                                <div class="form-group">
+                                    <label for="countrySelect" class="form-label">Country<span
+                                            class="required">*</span></label>
+                                    <select class="form-control" id="countrySelect" name="country" required>
+                                        <option value="" disabled selected>Choose a country</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CN">China</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KR">South Korea</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RU">Russia</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="VN">Vietnam</option>
+                                    </select>
+                                    <small class="text-danger" id="country_error"></small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="form-label">Pincode<span class="required">*</span></label>
-                                <input type="number" class="form-control" name="pincode" id="pincode" maxlength="6">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="pincode">Pincode<span class="required">*</span></label>
+                                    <input type="number" class="form-control" name="pincode" id="pincode" maxlength="6">
+                                    <small class="text-danger" id="pincode_error"></small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form-label">Message</label>
-                                <textarea id="w3review" name="w3review" rows="4" cols="50">
-                                    </textarea>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="w3review">Message</label>
+                                    <textarea id="w3review" name="w3review" rows="4" cols="50"
+                                        class="form-control"></textarea>
+                                    <small class="text-danger" id="w3review_error"></small>
+                                </div>
                             </div>
+
                         </div>
-                      
                     </div>
-                </div>
 
-               
-
-                <a href="#" class="rts-btn btn-primary">Submit <img src="<?= base_url()?>assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
+                    <button type="submit" class="rts-btn btn-primary" id="submit_form_btn">
+                        Submit <img src="<?= base_url() ?>assets/images/banner/icons/arrow--up-right.svg" alt="">
+                    </button>
+                </form>
 
             </div>
         </div>
@@ -274,7 +297,7 @@
 
 
 
-   
+
     <!-- footer Start -->
     <?php include 'footer.php'; ?>
     <!-- footer End -->
@@ -301,9 +324,9 @@
     <script src="<?= base_url()?>assets/js/vendor/bootstrap.min.js"></script>
     <!-- main js here -->
     <script src="<?= base_url()?>assets/js/main.js"></script>
+    <?php include('common/js_files.php');?>
+    <script src="<?= base_url()?>assets/view_js/contact_us.js"></script>
 
 </body>
 
-
-<!-- Mirrored from html.themewant.com/mediweb/contactus.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Apr 2025 12:33:35 GMT -->
 </html>
