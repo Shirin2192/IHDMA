@@ -346,10 +346,6 @@
             </div>
         </div>
     </section>
-
-
-
-
     <!-- footer Start -->
     <?php include ('common/footer.php'); ?>
     <!-- footer End -->
