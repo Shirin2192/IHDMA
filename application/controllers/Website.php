@@ -231,7 +231,8 @@ class Website extends CI_Controller {
 		$this->load->view('about');
 	}
 	public function benefits_of_membership() {
-		$this->load->view('benefits-of-membership');
+		$response['benefits'] = $this->model->selectWhereData('tbl_member_benefits', ['is_delete' => '1'], '*');
+		$this->load->view('benefits-of-membership', $response);
 	}
 	public function join_ihdma(): void {
 		$this->load->model('Member_model');

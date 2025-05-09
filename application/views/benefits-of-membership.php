@@ -65,8 +65,7 @@
                             <div class="top">
                                 <h5 class="title">Are you interested in joining ?</h5>
                                 <a href="<?= base_url()?>website/join_ihdma" class="rts-btn btn-primary btn-border">Become a member today</a>
-                            </div>
-                          
+                            </div>                          
                         </div>
                     </div>
                 </div>
@@ -74,8 +73,6 @@
         </div>
     </div>
     <!-- benefits-section end -->
-
-
     <!-- activities-section area start -->
     <div class="activities-section rts-section-gap2 bg-light">
         <div class="container">
