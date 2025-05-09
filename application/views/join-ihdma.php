@@ -96,7 +96,7 @@
                                 <span class="pre mb-5 wow fadeInUp" data-wow-delay=".2s"
                                     data-wow-duration=".8s">Categories</span>
                                 <h2 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
-                                    Individual Membership Categories
+                                    <?= $individual_category['category_name']  ?>
                                 </h2>
                                 <p class="disc text-center wow fadeInUp mb-3" data-wow-delay=".6s"
                                     data-wow-duration=".8s">
@@ -126,149 +126,56 @@
                             </div>
                         </div>
                     </div>
+                   
                     <div class="row g-75 mt--0">
+                    <?php
+                    foreach($membershiptype as $membershiptype_key => $membershiptype_row){
+                        if($membershiptype_row['fk_category_id']==1){
+                            $price = $membershiptype_row['price'];
+                            if($price != 0){
+                                $prices = $membershiptype_row['symbol'].' ' .$membershiptype_row['price'];
+                            }else{
+                                $prices = 'Free';
+                            }
+                    ?>
                         <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".2s"
                             data-wow-duration=".8s">
                             <div class="single-pricing-area">
                                 <div class="pricing-head">
-                                    <h6 class="title">Lifetime Membership</h6>
-                                    <h3 class="price">INR 5,000</h3>
+                                    <h6 class="title"><?= $membershiptype_row['type_name'] ?></h6>
+                                    <h3 class="price"><?= $prices ?></h3>
                                 </div>
                                 <div class="body">
                                     <div class="read-block">
                                         <p class="disc mb-0">
-                                            Regular Members of the Society shall be physicians or doctorate-level health
-                                            care professionals (MD, DO, PhD, DPM, DDS, or equivalent).
+                                        <?= $membershiptype_row['full_description'] ?>
                                             <span class="dots"></span>
-                                            <span class="more-text">
-                                                This category will include those Associates waived by the BOD as
-                                                exceptional cases.
+                                            <span class="more-text">                                            
                                             </span>
                                         </p>
                                         <span class="read-toggle">Read more</span>
                                     </div>
-
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now
-                                        <img src="<?=base_url()?>assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
+                                    <?php 
+                                    $price = $membershiptype_row['price'];
+                                    $symbol = $membershiptype_row['symbol'];
+                                    $type_name = $membershiptype_row['type_name'];
+                                    $data = [
+                                        'price' => $price,
+                                        'symbol' => $symbol,
+                                        'type_name' => $type_name,
+                                    ];
+                                    $encodedData = urlencode(base64_encode(json_encode($data)));
+                                    ?>
+                                    <a href="<?= base_url() ?>website/register?price=<?= $encodedData ?>" class="rts-btn btn-primary">Join
+                                        Now
+                                        <img src="<?=base_url()?>assets/images/banner/icons/arrow--up-right.svg"
+                                            alt=""></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".4s"
-                            data-wow-duration=".8s">
-                            <div class="single-pricing-area">
-                                <div class="pricing-head">
-                                    <h6 class="title">Corporate Membership
-                                    </h6>
-                                    <h3 class="price">INR 5,000
-                                    </h3>
-                                </div>
-                                <div class="body">
-                                    <div class="read-block">
-                                        <p class="disc mb-0">
-                                            Members shall be physicians (MD or DO) currently in a formal postgraduate
-                                            training program (internship,
-                                            <span class="dots"></span>
-                                            <span class="more-text">residency or fellowship or post-graduate doctoral
-                                                trainee).
-                                            </span>
-                                        </p>
-                                        <span class="read-toggle">Read more</span>
-                                    </div>
-
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now <img
-                                            src="<?=base_url()?>assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".6s"
-                            data-wow-duration=".8s">
-                            <div class="single-pricing-area">
-                                <div class="pricing-head">
-                                    <h6 class="title">Associate Membership</h6>
-                                    <h3 class="price">INR 5,000
-                                    </h3>
-                                </div>
-                                <div class="body">
-                                    <div class="read-block">
-                                        <p class="disc mb-0">
-                                            Hyperbaric technician, registered nurse, physician assistant, nurse
-                                            practitioner, undergraduate student, diving supervisor, certified scuba
-                                            instructor, or other hyperbaric or diving personnel with specialized
-                                            technical
-                                            <span class="dots"></span>
-                                            <span class="more-text">or research backgrounds but who do not possess the
-                                                academic background for Regular Membership can become Associate Members
-                                                of the Society. Regular Members (retired) who are 65 or older and are
-                                                not working can also fall under this category; however they will not
-                                                have voting rights. Associate Members are not entitled to vote or hold
-                                                office for the Regular Membership positions on the Board of Directors,
-                                                but are eligible to vote and hold office for the Associate positions on
-                                                the Board.
-                                            </span>
-                                        </p>
-                                        <span class="read-toggle">Read more</span>
-                                    </div>
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?php } }?>
                     </div>
-                    <div class="row g-75 mt--20 justify-content-center">
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".6s"
-                            data-wow-duration=".8s">
-                            <div class="single-pricing-area">
-                                <div class="pricing-head">
-                                    <h6 class="title">Biennial Membership
-                                    </h6>
-                                    <h3 class="price">INR 5,000
-                                    </h3>
-                                </div>
-                                <div class="body">
-                                    <div class="read-block">
-                                        <p class="disc mb-0">
-                                            Members shall be doctorate-level health care professionals in active
-                                            government service, or doctorate-level life sciences
-                                            <span class="dots"></span>
-                                            <span class="more-text">professionals in academic or government service.
-                                            </span>
-                                        </p>
-                                        <span class="read-toggle">Read more</span>
-                                    </div>
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".6s"
-                            data-wow-duration=".8s">
-                            <div class="single-pricing-area">
-                                <div class="pricing-head">
-                                    <h6 class="title">Student Membership</h6>
-                                    <h3 class="price">Free
-                                    </h3>
-                                </div>
-                                <div class="body">
-                                    <div class="read-block">
-                                        <p class="disc mb-0">
-                                            Must submit a letter from the Registrar confirming full-time enrollment and
-                                            the program the student is currently enrolled in. Must be a full-time
-                                            student enrolled in undergraduate or graduate programs
-                                            <span class="dots"></span>
-                                            <span class="more-text">in a related field of nursing, medicine or science.
-                                                Student members will receive online access to the IHDMA Journal and our
-                                                membership newsletter, Pressure along with all other membership
-                                                benefits. This membership type is non-paying and eligibility must be
-                                                confirmed annually with enrollment information. Student members are not
-                                                eligible to vote or hold office.
-                                            </span>
-                                        </p>
-                                        <span class="read-toggle">Read more</span>
-                                    </div>
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -305,107 +212,54 @@
                         </div>
                     </div>
                     <div class="row g-75 mt--0">
+                    <?php
+                    foreach($membershiptype as $membershiptype_key => $membershiptype_row){
+                        if($membershiptype_row['fk_category_id']==2){
+                            $price = $membershiptype_row['price'];
+                            if($price != 0){
+                                $prices = $membershiptype_row['symbol'].' ' .$membershiptype_row['price'];
+                            }else{
+                                $prices = 'Free';
+                            }
+                    ?>
                         <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".2s"
                             data-wow-duration=".8s">
                             <div class="single-pricing-area">
                                 <div class="pricing-head">
-                                    <h6 class="title">Diamond Corporate Partner</h6>
-                                    <h3 class="price">INR 5,000</h3>
+                                    <h6 class="title"><?= $membershiptype_row['type_name'] ?></h6>
+                                    <h3 class="price"><?= $prices ?></h3>
                                 </div>
                                 <div class="body">
                                     <div class="read-block">
                                         <p class="disc mb-0">
-                                            Five (5) individual memberships, emails sent by IHDMA on behalf of the
-                                            corporate partner, Banner displayed on the Corporate,
+                                        <?= $membershiptype_row['full_description'] ?>
                                             <span class="dots"></span>
-                                            <span class="more-text">
-                                                Vendor, and the IHDMA Home pages.
+                                            <span class="more-text">                                            
                                             </span>
                                         </p>
                                         <span class="read-toggle">Read more</span>
                                     </div>
-
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now <img
-                                            src="<?=base_url()?>assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
+                                    <?php 
+                                    $price = $membershiptype_row['price'];
+                                    $symbol = $membershiptype_row['symbol'];
+                                    $type_name = $membershiptype_row['type_name'];
+                                    $data = [
+                                        'price' => $price,
+                                        'symbol' => $symbol,
+                                        'type_name' => $type_name,
+                                    ];
+                                    $encodedData = urlencode(base64_encode(json_encode($data)));
+                                    ?>
+                                    <a href="<?= base_url() ?>website/register?price=<?= $encodedData ?>" class="rts-btn btn-primary">Join
+                                        Now
+                                        <img src="<?=base_url()?>assets/images/banner/icons/arrow--up-right.svg"
+                                            alt=""></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".4s"
-                            data-wow-duration=".8s">
-                            <div class="single-pricing-area">
-                                <div class="pricing-head">
-                                    <h6 class="title">Platinum Corporate Partner
-                                    </h6>
-                                    <h3 class="price">INR 5,000
-                                    </h3>
-                                </div>
-                                <div class="body">
-                                    <div class="read-block">
-                                        <p class="disc mb-0">
-                                            Four (4) individual memberships, emails sent by IHDMA on behalf of the
-                                            corporate partner,
-                                            <span class="dots"></span>
-                                            <span class="more-text">Banner displayed on the Corporate and Vendor pages.
-                                            </span>
-                                        </p>
-                                        <span class="read-toggle">Read more</span>
-                                    </div>
-
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now <img
-                                            src="<?=base_url()?>assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".6s"
-                            data-wow-duration=".8s">
-                            <div class="single-pricing-area">
-                                <div class="pricing-head">
-                                    <h6 class="title">Gold Corporate Partner</h6>
-                                    <h3 class="price">INR 5,000
-                                    </h3>
-                                </div>
-                                <div class="body">
-                                    <div class="read-block">
-                                        <p class="disc mb-0">
-                                            Three (3) individual memberships, emails sent by UHMS on behalf of the
-                                            corporate partner, Banner displayed
-                                            <span class="dots"></span>
-                                            <span class="more-text">on the Corporate page.
-                                            </span>
-                                        </p>
-                                        <span class="read-toggle">Read more</span>
-                                    </div>
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?php } }?>
                     </div>
-                    <div class="row g-75 mt--20 justify-content-center">
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".6s"
-                            data-wow-duration=".8s">
-                            <div class="single-pricing-area">
-                                <div class="pricing-head">
-                                    <h6 class="title">Silver Corporate Partner
-                                    </h6>
-                                    <h3 class="price">INR 5,000
-                                    </h3>
-                                </div>
-                                <div class="body">
-                                    <div class="read-block">
-                                        <p class="disc mb-0">
-                                            Two (2) individual memberships and Banner displayed
-                                            <span class="dots"></span>
-                                            <span class="more-text"> on the Corporate page.
-                                            </span>
-                                        </p>
-                                        <span class="read-toggle">Read more</span>
-                                    </div>
-                                    <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -427,7 +281,7 @@
     <?php include ('common/progress-bar.php'); ?>
     <!-- progress area end -->
     <?php include('common/js_files.php');?>
-    
+
 </body>
 
 </html>

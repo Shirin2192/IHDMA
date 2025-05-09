@@ -17,7 +17,17 @@ class Website extends CI_Controller {
 		$this->load->view('index');
 	}
 	public function register(){
-		$this->load->view('register');
+		$encodedData = $this->input->get('price');
+		$dataArray = json_decode(base64_decode(urldecode($encodedData)), true);
+
+		$price = $dataArray['price'] ?? '';
+		$symbol = $dataArray['symbol'] ?? '';
+		$type_name = $dataArray['type_name'] ?? '';
+
+		$data['price'] = $price;
+		$data['symbol'] = $symbol;
+		$data['type_name'] = $type_name;
+		$this->load->view('register', $data);
 	}
 	public function submit_registration()
 	{
@@ -223,8 +233,12 @@ class Website extends CI_Controller {
 	public function benefits_of_membership() {
 		$this->load->view('benefits-of-membership');
 	}
-	public function join_ihdma() {
-		$this->load->view('join-ihdma');
+	public function join_ihdma(): void {
+		$this->load->model('Member_model');
+		$response['individual_category'] = $this->model->selectWhereData('tbl_membership_categories', ['is_delete' => '1','id'=>1], '*');
+		$response['corporate_category'] = $this->model->selectWhereData('tbl_membership_categories', ['is_delete' => '1','id'=>2], '*');
+		$response['membershiptype'] = $this->Member_model->get_membership_types();
+		$this->load->view('join-ihdma',$response);
 	}
 	public function contact_us() {
 		$this->load->view('contactus');

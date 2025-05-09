@@ -38,9 +38,11 @@
     <section class="login-section rts-section-gap2">
         <div class="container">
             <div class="login-box">
+            <h4><?= $type_name ?></h4>
+            <p>Please enter the information below to purchase your <?= $type_name ?>. The price you will need to pay is <?= $symbol ?><?= $price ?>. </p>
                 <div class="login-content">
                     <h6 class="text-center">Please enter your details</h6>
-
+                    
                 </div>
                 <form id="registerForm" class="mt-5">
                     <div class="account-info mb-5">
@@ -274,13 +276,13 @@
                     <div class="payment-info">
                         <div class="row">
                             <h6 class="text-left">Payment Information</h6>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="form-label">Coupon</label>
                                     <input type="text" class="form-control" name="coupon" id="coupon">
                                     <div class="text-danger" id="couponError" style="font-size: 0.9em;"></div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="form-label">Payment Terms
@@ -294,54 +296,9 @@
                                     <label for="form-label">Price
                                     </label>
                                     <input class="form-control" type="text" name="price" id="price" readonly
-                                        placeholder="$86.50">
+                                        placeholder="<?= $symbol ?><?= $price ?>" value="<?= $price?>">
                                 </div>
                                 <div class="text-danger" id="priceError" style="font-size: 0.9em;"></div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="paymentmethod">Payment Method<span class="required">*</span></label>
-                                    </label>
-                                    <div class="customRadio radiolabel mb-3 ">
-                                        <input type="radio" name="paymentmethod" id="creditcard" value="Credit Card"
-                                            class="occ">
-                                        <label for="creditcard"> Credit Card </label>
-                                        <input type="radio" name="paymentmethod" id="offlinepayment"
-                                            value="Offline Payment" class="occ"> <label for="offlinepayment"> Offline
-                                            Payment </label>
-                                    </div>
-                                    <div class="text-danger" id="paymentmethodError" style="font-size: 0.9em;"></div>
-
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="form-label">Credit Card Number<span class="required">*</span></label>
-                                    <input type="text" class="form-control" name="cardnumber" id="cardnumber">
-                                    <div class="text-danger" id="cardnumberError" style="font-size: 0.9em;"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="expiry">Card Expiry Date</label>
-                                    <input type="text" class="form-control" id="expiry" name="expiry"
-                                        placeholder="MM/YY" maxlength="5" pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
-                                    <div class="text-danger" id="expiryError" style="font-size: 0.9em;"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="form-label">Card (CVV) Code<span class="required">*</span></label>
-                                    <input type="text" class="form-control" name="cvvcode" id="cvvcode">
-                                    <div class="text-danger" id="cvvcodeError" style="font-size: 0.9em;"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="form-label">Card Holder Name<span class="required">*</span></label>
-                                    <input type="text" class="form-control" name="cardholdername" id="cardholdername">
-                                    <div class="text-danger" id="cardholdernameError" style="font-size: 0.9em;"></div>
-                                </div>
                             </div>
                         </div>
                     </div>
