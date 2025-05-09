@@ -9,7 +9,7 @@
     <title>Indian Hyperbaric and Diving Medicine Association</title>
     <meta name="description" content="">
     <?php include 'common/css_files.php'; ?>
-   
+
 
 </head>
 
@@ -47,14 +47,18 @@
                         <div class="row">
                             <h6 class="text-left">Account Information</h6>
                             <div class="col-md-4">
+                                <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id">
+                                <input type="hidden" id="razorpay_order_id" name="razorpay_order_id">
+                                <input type="hidden" id="razorpay_signature" name="razorpay_signature">
                                 <div class="form-group">
                                     <label for="membershiptype">Membership Type<span class="required">*</span></label>
-                                    <select class="form-control chosen-select" id="membershiptype" name="membershiptype" data-placeholer="Select Membership Type">
+                                    <select class="form-control chosen-select" id="membershiptype" name="membershiptype"
+                                        data-placeholer="Select Membership Type">
                                         <option value=""></option>
                                         <option value="nursing">Nursing</option>
                                         <option value="doctor">Doctor</option>
                                         <option value="corporate">Corporate</option>
-                                        </select>
+                                    </select>
 
                                     <div class="text-danger" id="membershiptypeError" style="font-size: 0.9em;"></div>
                                 </div>
@@ -116,9 +120,8 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <div class="form-group">
-                                    <label for="state" class="form-label"> State<span
-                                            class="required">*</span></label>
-                                    <select class="form-control chosen-select" id="state" name="state" >
+                                    <label for="state" class="form-label"> State<span class="required">*</span></label>
+                                    <select class="form-control chosen-select" id="state" name="state">
                                         <option value="" disabled selected>Choose a state</option>
                                         <option value="AP">Andhra Pradesh</option>
                                         <option value="AR">Arunachal Pradesh</option>
@@ -164,7 +167,7 @@
                                 <div class="form-group">
                                     <label for="country" class="form-label"> Country<span
                                             class="required">*</span></label>
-                                    <select class="form-control chosen-select" id="country" name="country" >
+                                    <select class="form-control chosen-select" id="country" name="country">
                                         <option value="" disabled selected>Choose a country</option>
                                         <option value="AF">Afghanistan</option>
                                         <option value="AL">Albania</option>
@@ -246,7 +249,7 @@
                                         name="DefectiveVision" value="No" checked="">
                                     <label for="DefectiveVisionNo1">No</label>
                                 </div>
-                                
+
                             </div>
                             <div class="col-md-12 mt-4">
                                 <div class="infoswitch">
@@ -290,7 +293,8 @@
                                 <div class="form-group">
                                     <label for="form-label">Price
                                     </label>
-                                    <input class="form-control" type="text" name="price" id="price" readonly placeholder="$86.50">
+                                    <input class="form-control" type="text" name="price" id="price" readonly
+                                        placeholder="$86.50">
                                 </div>
                                 <div class="text-danger" id="priceError" style="font-size: 0.9em;"></div>
                             </div>
@@ -302,11 +306,12 @@
                                         <input type="radio" name="paymentmethod" id="creditcard" value="Credit Card"
                                             class="occ">
                                         <label for="creditcard"> Credit Card </label>
-                                        <input type="radio" name="paymentmethod" id="offlinepayment" value="Offline Payment"
-                                            class="occ"> <label for="offlinepayment"> Offline Payment </label>
+                                        <input type="radio" name="paymentmethod" id="offlinepayment"
+                                            value="Offline Payment" class="occ"> <label for="offlinepayment"> Offline
+                                            Payment </label>
                                     </div>
                                     <div class="text-danger" id="paymentmethodError" style="font-size: 0.9em;"></div>
-                                    
+
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -320,7 +325,7 @@
                                 <div class="form-group">
                                     <label for="expiry">Card Expiry Date</label>
                                     <input type="text" class="form-control" id="expiry" name="expiry"
-                                        placeholder="MM/YY" maxlength="5" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" >
+                                        placeholder="MM/YY" maxlength="5" pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
                                     <div class="text-danger" id="expiryError" style="font-size: 0.9em;"></div>
                                 </div>
                             </div>
@@ -341,7 +346,8 @@
                         </div>
                     </div>
 
-                    <button class="rts-btn btn-primary" type="submit">Submit <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt=""></button>
+                    <button class="rts-btn btn-primary" type="submit">Submit <img
+                            src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt=""></button>
                 </form>
             </div>
         </div>
@@ -360,6 +366,7 @@
     <?php include ('common/progress-bar.php'); ?>
     <!-- progress area end -->
     <?php include('common/js_files.php');?>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="<?= base_url();?>assets/view_js/register.js"></script>
 
 </body>

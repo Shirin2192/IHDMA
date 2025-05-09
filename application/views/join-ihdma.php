@@ -427,6 +427,7 @@
     <?php include ('common/progress-bar.php'); ?>
     <!-- progress area end -->
     <?php include('common/js_files.php');?>
+    
 </body>
 
 </html>

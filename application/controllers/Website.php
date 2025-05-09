@@ -1,5 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+use Razorpay\Api\Api;
+use Razorpay\Api\Errors\SignatureVerificationError;
 
 class Website extends CI_Controller {
 	public function __construct()
@@ -17,77 +19,11 @@ class Website extends CI_Controller {
 	public function register(){
 		$this->load->view('register');
 	}
-	// public function register_user() {
-	// 	$name         = $this->input->post('name');
-	// 	$user_name    = $this->input->post('user_name');
-	// 	$email        = $this->input->post('email');
-	// 	$password     = $this->input->post('password');
-	// 	$mobile       = $this->input->post('mobile');
-	// 	$address1     = $this->input->post('address1');
-	// 	$address2     = $this->input->post('address2');
-	// 	$city         = $this->input->post('city');
-	// 	$state        = $this->input->post('state');
-	// 	$postal_code  = $this->input->post('postal_code');
-	// 	$country      = $this->input->post('country');
-	// 	$dob          = $this->input->post('dob');		
-	
-	// 	// Check for existing email or username
-	// 	$exist_email = $this->model->selectWhereData('tbl_users', ['email' => $email, 'user_name' => $user_name, 'is_delete' => '0']);
-	// 	if ($exist_email) {
-	// 		echo json_encode([
-	// 			'status' => 'error',
-	// 			'message' => 'Email or Username already exists.'
-	// 		]);
-	// 		return;
-	// 	}
-	// 	$exist_contact = $this->model->selectWhereData('tbl_users', ['mobile' => $mobile, 'is_delete' => '0']);
-	// 	if ($exist_contact) {
-	// 		echo json_encode([
-	// 			'status' => 'error',
-	// 			'message' => 'Mobile number already exists.'
-	// 		]);
-	// 		return;
-	// 	}	
-	// 	// Hash the password (strongly recommended)
-	// 	$hashed_password = decy_ency('encrypt', $password);
-	
-	// 	// Insert new user
-	// 	$insertData = [
-	// 		'name'           => $name,
-	// 		'user_name'      => $user_name,
-	// 		'email'          => $email,
-	// 		'password'       => $hashed_password,
-	// 		'mobile'         => $mobile,
-	// 		'address1'       => $address1,
-	// 		'address2'       => $address2,
-	// 		'city'           => $city,
-	// 		'state'          => $state,
-	// 		'postal_code'    => $postal_code,
-	// 		'country'        => $country,
-	// 		'dob'            => $dob,			
-	// 	];
-	
-	// 	$insert = $this->model->insertData('tbl_users', $insertData);
-	// 	if ($insert) {
-	// 		echo json_encode([
-	// 			'status' => 'success',
-	// 			'message' => 'User registered successfully.'
-	// 		]);
-	// 	} else {
-	// 		echo json_encode([
-	// 			'status' => 'error',
-	// 			'message' => 'User registration failed.'
-	// 		]);
-	// 	}
-	// }
-
-	// Controller: Register.php
-
 	public function submit_registration()
 	{
 		$this->load->library('form_validation');
-		
-		// Validation Rules
+
+		// Step 1: Form Validation
 		$this->form_validation->set_rules('membershiptype', 'Membership Type', 'required');
 		$this->form_validation->set_rules('username', 'Username', 'required|is_unique[tbl_users.user_name]');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
@@ -99,80 +35,117 @@ class Website extends CI_Controller {
 		$this->form_validation->set_rules('state', 'State', 'required');
 		$this->form_validation->set_rules('country', 'Country', 'required');
 		$this->form_validation->set_rules('pincode', 'Pincode', 'required|numeric');
-		$this->form_validation->set_rules('paymentmethod', 'Payment Method', 'required');
-		$this->form_validation->set_rules('cardnumber', 'Card Number', 'required');
-		$this->form_validation->set_rules('cvvcode', 'CVV', 'required');
-		$this->form_validation->set_rules('cardholdername', 'Card Holder Name', 'required');
-		$this->form_validation->set_rules('expiry', 'Expiry Date', 'required');
-	
-		if ($this->form_validation->run() == FALSE) {
-			// Collect individual validation errors and return them as an associative array
+
+		if ($this->form_validation->run() === FALSE) {
 			$errors = [];
 			foreach ($_POST as $key => $value) {
 				if (form_error($key)) {
 					$errors[$key] = strip_tags(form_error($key));
 				}
 			}
-	
 			echo json_encode(['status' => 'error', 'errors' => $errors]);
-		} else {
-			// Insert into tbl_members
-		    $password = $this->input->post('password');			// Send email to user (optional)
-			$hashpassword = decy_ency('encrypt', $password);
-			$member_data = [
-				'membership_type' => $this->input->post('membershiptype'),
-				'user_name'        => $this->input->post('username'),
-				'password'        => $hashpassword,
-				'name'            => $this->input->post('fullname'),
-				'mobile'          => $this->input->post('phone'),
-				'email'           => $this->input->post('email'),
-				'address1'        => $this->input->post('address'),
-				'city'            => $this->input->post('city'),
-				'state'           => $this->input->post('state'),
-				'country'         => $this->input->post('country'),
-				'postal_code'     => $this->input->post('pincode'),
-				'user_type'       => 'member',
-				'referred_by_member' => $this->input->post('referred_by_member') ? 'Yes' : 'No',
-				'contribute_registry' => $this->input->post('contribute_registry') ? 'Yes' : 'No',
-			];
-// 	print_r($member_data);die;
-        	$member_id = $this->model->insertData('tbl_users',$member_data);
-	
-			// Insert into tbl_payments
-			$payment_data = [
-				'fk_user_id'        => $member_id,
-				'payment_method'    => $this->input->post('paymentmethod'),
-				'coupon_code'       => $this->input->post('coupon'),
-				'amount'            => $this->input->post('price'),
-				'card_last4'        => $this->input->post('cardnumber'),
-				'card_expiry'       => $this->input->post('expiry'),
-				'cvv_code'          => $this->input->post('cvvcode'),
-				'card_holder_name'  => $this->input->post('cardholdername'),
-				'transaction_id'    => $this->input->post('transaction_id'),
-				'payment_response'  => $this->input->post('payment_response'),
-				'payment_date'      => date('Y-m-d H:i:s'),
-				'status'            => 'success', // Assuming payment is successful
-			];
-				
-			$this->model->insertData('tbl_payments',$payment_data);
-			
-			$email = $this->input->post('email');
-			
-			$this->load->library('email');
-			$html = "<h3>Login Details</h3>";
-    		$html .= "<p><strong>Email</strong> {$email}</p>";
-    		$html .= "<p><strong>Password</strong> {$password}</p>";
-    		
-    	   //Email config
-        	$to_email = 'shirin@sda-zone.com';    		
-    		$subject = "IHDMA Login Details";
-    		$send = send_inventory_email($to_email, $subject, $html);
-			
-	
-			echo json_encode(['status' => 'success', 'message' => 'Registration successful.']);
+			return;
 		}
+
+		// Step 2: Razorpay Signature Verification
+		$razorpay_order_id = $this->input->post('razorpay_order_id');
+		$razorpay_payment_id = $this->input->post('razorpay_payment_id');
+		$razorpay_signature = $this->input->post('razorpay_signature');
+
+		if (!$razorpay_order_id || !$razorpay_payment_id || !$razorpay_signature) {
+			echo json_encode(['status' => 'error', 'message' => 'Incomplete payment information.']);
+			return;
+		}
+
+		try {
+			$api = new Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET'); // Replace with real keys
+			$attributes = [
+				'razorpay_order_id' => $razorpay_order_id,
+				'razorpay_payment_id' => $razorpay_payment_id,
+				'razorpay_signature' => $razorpay_signature
+			];
+			$api->utility->verifyPaymentSignature($attributes);
+		} catch (SignatureVerificationError $e) {
+			echo json_encode(['status' => 'error', 'message' => 'Payment verification failed.']);
+			return;
+		}
+
+		// Step 3: Save Member Data
+		$password = $this->input->post('password');
+		$hashpassword = decy_ency('encrypt', $password); // Use your own encryption function
+
+		$member_data = [
+			'membership_type'       => $this->input->post('membershiptype'),
+			'user_name'             => $this->input->post('username'),
+			'password'              => $hashpassword,
+			'name'                  => $this->input->post('fullname'),
+			'mobile'                => $this->input->post('phone'),
+			'email'                 => $this->input->post('email'),
+			'address1'              => $this->input->post('address'),
+			'city'                  => $this->input->post('city'),
+			'state'                 => $this->input->post('state'),
+			'country'               => $this->input->post('country'),
+			'postal_code'           => $this->input->post('pincode'),
+			'user_type'             => 'member',
+			'referred_by_member'    => $this->input->post('referred_by_member') ? 'Yes' : 'No',
+			'contribute_registry'   => $this->input->post('contribute_registry') ? 'Yes' : 'No',
+		];
+
+		$member_id = $this->model->insertData('tbl_users', $member_data);
+
+		// Step 4: Save Payment Data
+		$payment_data = [
+			'fk_user_id'        => $member_id,
+			'payment_method'    => 'razorpay',
+			'amount'            => $this->input->post('price'),
+			'transaction_id'    => $razorpay_payment_id,
+			'payment_response'  => json_encode($attributes),
+			'payment_date'      => date('Y-m-d H:i:s'),
+			'status'            => 'success',
+		];
+		$this->model->insertData('tbl_payments', $payment_data);
+
+		// Step 5: Send Confirmation Email
+		$email = $this->input->post('email');
+		$this->load->library('email');
+
+		$html = "<h3>Login Details</h3>";
+		$html .= "<p><strong>Email:</strong> {$email}</p>";
+		$html .= "<p><strong>Password:</strong> {$password}</p>";
+
+		$to_email = $email;
+		$subject = "IHDMA Login Details";
+		send_inventory_email($to_email, $subject, $html);
+
+		echo json_encode(['status' => 'success', 'message' => 'Registration successful.']);
 	}
-	
+	public function create_order()
+	{
+		$this->load->helper('security');
+		$amount = $this->input->post('price'); // price in rupees
+
+		if (!$amount) {
+			echo json_encode(['status' => 'error', 'message' => 'Invalid amount']);
+			return;
+		}
+
+		$api = new \Razorpay\Api\Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET');
+		$order = $api->order->create([
+			'receipt'         => 'rcptid_' . time(),
+			'amount'          => $amount * 100, // amount in paise
+			'currency'        => 'INR',
+			'payment_capture' => 1
+		]);
+
+		echo json_encode([
+			'status' => 'success',
+			'order_id' => $order['id'],
+			'amount' => $order['amount'],
+			'key_id' => 'YOUR_KEY_ID' // Send to JS for Razorpay checkout
+		]);
+	}
+
+
 	public function login_user()
 	{
 		// Load necessary libraries
