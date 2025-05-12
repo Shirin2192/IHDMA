@@ -193,13 +193,7 @@
                                 </h2>
                                 <p class="disc text-center wow fadeInUp mb-5" data-wow-delay=".6s"
                                     data-wow-duration=".8s">
-                                    The IHDMA’s Corporate Partners consist of several esteemed international
-                                    corporations, associations, health care facilities, foundations, and partnerships
-                                    that operate in the diving and hyperbaric medicine field. The organization remains
-                                    devoted to advancing diving, hyperbaric medicine, and wound care, and we appreciate
-                                    the support of our sponsors who share this commitment. Corporations or companies
-                                    that endorse the IHDMA’s mission, objectives, and goals and wish to contribute
-                                    financially can become corporate members.
+                                    <?= $corporate_category['description']  ?>
                                 <h4 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
                                     Levels of Corporate Partnerships
                                 </h4>
