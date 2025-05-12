@@ -37,18 +37,9 @@
                 <div class="col-lg-12">
                     <div class="aboutus-details">
                         <p class="mb--30">
-                            Discover how the Indian Hyperbaric and Diving Medicine Association (IHDMA) is
-                            revolutionizing the field of diving and hyperbaric medicine. Gain access to cutting-edge
-                            scientific information, join a vibrant community, and explore the depths of knowledge with
-                            us.
+                           <?= $about['about_us']?>
                         </p>
-                        <p class="">
-                            The Indian Hyperbaric and Diving Medicine Association (IHDMA) is a non-profit organization
-                            dedicated to serving its members across India. Our mission is to provide the most up-to-date
-                            scientific information on diving and hyperbaric medicine physiology not only to our members
-                            but also to the global community. We take pride in being a leading source of knowledge and
-                            expertise in this field. Thank you for choosing to be a part of our community.
-                        </p>
+                        
                     </div>
                 </div>
             </div>
@@ -68,14 +59,8 @@
                 </div>
                 <div class="col-lg-12 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".8s">
                     <div class="objective-area">
-                        <ul class="mb-0">
-                            <li>To provide medical and wellness treatment of the Hyperbaric oxygen therapy and provide
-                                training by conducting conferences, seminars to promote the same.</li>
-                            <li>To promote Hyperbarlc medicine in medical practices amongst practicing doctors and
-                                public at large.</li>
-                            <li>To start monthly bulletin or society journal or any form of activities to reach public
-                                at large.</li>
-                        </ul>
+                       <?= $objectives['objectives'] ?> 
+                      
                     </div>
                 </div>
             </div>
@@ -104,83 +89,37 @@
                         </p>
                     </div>
                     <div class="row mt--40 mb--40">
+                        <?php
+                        $base_path = 'http://localhost/idhma_admin/';
+                        foreach($team_members as $team_members_row){ 
+                         ?>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12 fadeInLeft wow" data-wow-duration="1s"
                             data-wow-delay=".1s">
                             <div class="single-team-area-start team-absolute-bottom" data-bs-toggle="modal"
-                                data-bs-target="#teamMemberModal1">
-                                <img src="<?= base_url()?>assets/images/team/himanshu.png" alt="team">
+                                data-bs-target="#teamMemberModal1"
+                                 data-name="<?= htmlspecialchars($team_members_row['name']) ?>"
+                                data-designation="<?= htmlspecialchars($team_members_row['designation']) ?>"
+                                data-description="<?= htmlspecialchars($team_members_row['description']) ?>"
+                                data-photo="<?= $base_path . $team_members_row['photo'] ?>"
+                                data-facebook="<?= $team_members_row['facebook_link'] ?>"
+                                data-linkedin="<?= $team_members_row['linkedin_link'] ?>"
+                                data-twitter="<?= $team_members_row['twitter_link'] ?>"
+                                data-youtube="<?= $team_members_row['youtube_link'] ?>">
+                                <img src="<?= $base_path.$team_members_row['photo'] ?>" alt="team">
                                 <div class="bottom">
                                     <div class="social-area-tranaparent">
                                         <ul>
-                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                           
                                             <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            
                                         </ul>
                                     </div>
-                                    <h6 class="title">Dr. Himanshu Agarwal</h6>
-                                    <p class="mb-0">MBBS, MD</p>
+                                    <h6 class="title"><?= $team_members_row['name']?></h6>
+                                    <p class="mb-0"><?= $team_members_row['designation']?></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 fadeInLeft wow" data-wow-duration="1s"
-                            data-wow-delay=".3s">
-                            <div class="single-team-area-start team-absolute-bottom" data-bs-toggle="modal"
-                                data-bs-target="#teamMemberModal2">
-                                <img src="<?= base_url()?>assets/images/team/dhiraj.png" alt="team">
-
-                                <div class="bottom">
-                                    <div class="social-area-tranaparent">
-                                        <ul>
-                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class="title">Dr. Dhiraj Saxena</h6>
-                                    <p class="mb-0">Consultant Physician</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 fadeInLeft wow" data-wow-duration="1s"
-                            data-wow-delay=".5s">
-                            <div class="single-team-area-start team-absolute-bottom" data-bs-toggle="modal"
-                                data-bs-target="#teamMemberModal3">
-                                <img src="<?= base_url()?>assets/images/team/sample.png" alt="team">
-                                <div class="bottom">
-                                    <div class="social-area-tranaparent">
-                                        <ul>
-                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class="title">Dr. Narayanamurthy</h6>
-                                    <p class="mb-0">Lorem ipsum dolor</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 fadeInLeft wow" data-wow-duration="1s"
-                            data-wow-delay=".7s">
-                            <div class="single-team-area-start team-absolute-bottom" data-bs-toggle="modal"
-                                data-bs-target="#teamMemberModal4">
-                                <img src="<?= base_url()?>assets/images/team/manoj.png" alt="team">
-                                <div class="bottom">
-                                    <div class="social-area-tranaparent">
-                                        <ul>
-                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class="title">Dr. Manoj Gupta</h6>
-                                    <p class="mb-0">Lorem ipsum dolor</p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php }?>                        
                     </div>
                 </div>
             </div>
@@ -194,84 +133,22 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="teamMemberModalLabel1">Dr. Himanshu Agarwal</h5>
+                    <h5 class="modal-title member_name" id="teamMemberModalLabel1"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p class="mb-0">Dr. Himanshu Agarwal, MBBS, MD is the Medical Director and also founder of National
-                        Hyperbarics and Rehabilitation Research Centre. He has a keen interest in Hyperbaric medicine
-                        procedures and problem wound management. Under him he has two units of hard shelled multi-place
-                        chamber (also first chamber in Rajasthan). installed at FORTIS ESCORT Hospital and another at
-                        New Vidhyadhar Nagar Jaipur since 2009.</p>
+                <div class="modal-body">                  
+                    <p class="mb-0" id="member_description"></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal for Dr. Dhiraj Saxena -->
-    <div class="modal fade teammember" id="teamMemberModal2" tabindex="-1" aria-labelledby="teamMemberModalLabel2"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="teamMemberModalLabel2">Dr. Dhiraj Saxena</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="mb-0">Dr Dhiraj Saxena is practicing Consultant Physician in Apollo Hospital Ahmedabad
-                        since 15 years and has to his credit establishing the first Hyperbaric Oxygen Therapy unit in
-                        Apollo Hospital, Ahmedabad in 2007 (The first HBOT center in Gujarat).</p>
-                    <p>He has a keen interest in Hyperbaric medicine procedures and problem wound management. Over the
-                        last 10 years he has helped in establishing New Hyperbaric Oxygen therapy centers in Banglore ,
-                        Jaipur, Katni, Miraj , Ahmedabad and he has trained technicians in HBOT procedures. </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Dr. Narayanamurthy -->
-    <div class="modal fade teammember" id="teamMemberModal3" tabindex="-1" aria-labelledby="teamMemberModalLabel3"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="teamMemberModalLabel3">Dr. Narayanamurthy</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
-                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Dr. Manoj Gupta -->
-    <div class="modal fade teammember" id="teamMemberModal4" tabindex="-1" aria-labelledby="teamMemberModalLabel4"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="teamMemberModalLabel4">Dr. Manoj Gupta</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
-                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.</p>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
+    
 
 
 
     <!-- footer Start -->
-    <?php include 'common/footer.php'; ?>
+     <?php include('common/footer.php');?>
     <!-- footer End -->
 
 
@@ -284,5 +161,34 @@
     <?php include ('common/progress-bar.php'); ?>
     <!-- progress area end -->
     <?php include('common/js_files.php');?>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('teamMemberModal1');
+
+    modal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+
+        // Get data attributes from clicked team card
+        const name = button.getAttribute('data-name');
+        const designation = button.getAttribute('data-designation');
+        const description = button.getAttribute('data-description');
+        const photo = button.getAttribute('data-photo');
+        const linkedin = button.getAttribute('data-linkedin');
+        const facebook = button.getAttribute('data-facebook');
+        const twitter = button.getAttribute('data-twitter');
+        const youtube = button.getAttribute('data-youtube');
+
+        // Set modal content
+        modal.querySelector('.member_name').textContent = name;
+        modal.querySelector('#member_description').textContent = description;
+
+        // Optionally add more:
+        // modal.querySelector('.modal-body').innerHTML += `<img src="${photo}" class="img-fluid mb-2"/>`;
+
+        // You can also update social icons dynamically here if needed
+    });
+});
+</script>
+
 </body>
 </html>

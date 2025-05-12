@@ -39,8 +39,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-6">
                     <div class="title-wrapper-left">
-                        <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Benefits of
-                            Membership</span>
+                        <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s"><?= $benefits['title_benefits'] ?></span>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".8s">
