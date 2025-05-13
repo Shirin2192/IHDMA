@@ -106,7 +106,7 @@ use PHPMailer\PHPMailer\Exception;
  * @param string $from_name Sender name
  * @return bool True if email was sent successfully, false otherwise
  */
-function send_inventory_email($to_email, $subject, $message, $from_name = 'Nia Natura Inventory System') {
+function send_inventory_email($to_email, $subject, $message, $from_name = 'IHDMA') {
     $CI =& get_instance();
     
     // Create a new PHPMailer instance

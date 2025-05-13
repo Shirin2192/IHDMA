@@ -98,12 +98,9 @@
                                 </h2>
                                 <p class="disc text-center wow fadeInUp mb-3" data-wow-delay=".6s"
                                     data-wow-duration=".8s">
-                                    IHDMA, most of its members are diving or hyperbaric scientists and physicians.
-                                    Hyperbaric medicine nurses, technicians, sports, and commercial divers as well as
-                                    those with an interest in hyperbaric and diving medicine comprise a substantial
-                                    group of associate members; and the ranks of student members are rapidly expanding.
+                                    <?= $individual_category['description']  ?>
                                 </p>
-                                <p class="disc text-center wow fadeInUp mb-3" data-wow-delay=".8s"
+                                <!-- <p class="disc text-center wow fadeInUp mb-3" data-wow-delay=".8s"
                                     data-wow-duration=".8s">
                                     All Memberships receive online access to a pdf version of our IHDMA Journal. If you
                                     wish to order a Hard Copy of the UHM Journal (ADDITIONAL FEE), once registered and
@@ -117,7 +114,7 @@
                                     information on the Chapter leadership and the next Chapter meeting, including the
                                     date/location/schedule/registration. We hope you will support your local chapter by
                                     attending their meeting.
-                                </p>
+                                </p> -->
                                 <h4 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
                                     Membership is Available at the Following Levels (all fees are annual)
                                 </h4>
@@ -196,13 +193,7 @@
                                 </h2>
                                 <p class="disc text-center wow fadeInUp mb-5" data-wow-delay=".6s"
                                     data-wow-duration=".8s">
-                                    The IHDMA’s Corporate Partners consist of several esteemed international
-                                    corporations, associations, health care facilities, foundations, and partnerships
-                                    that operate in the diving and hyperbaric medicine field. The organization remains
-                                    devoted to advancing diving, hyperbaric medicine, and wound care, and we appreciate
-                                    the support of our sponsors who share this commitment. Corporations or companies
-                                    that endorse the IHDMA’s mission, objectives, and goals and wish to contribute
-                                    financially can become corporate members.
+                                    <?= $corporate_category['description']  ?>
                                 <h4 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
                                     Levels of Corporate Partnerships
                                 </h4>

@@ -14,7 +14,8 @@ class Website extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('index');
+		$response['team_members'] = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*',false);
+		$this->load->view('index',$response);
 	}
 	public function register(){
 		$encodedData = $this->input->get('price');
@@ -228,10 +229,14 @@ class Website extends CI_Controller {
 		}
 	}
 	public function about() {
-		$this->load->view('about');
+		$response['about'] = $this->model->selectWhereData('tbl_about_us', ['is_delete' => '1'], '*');
+		$response['objectives'] = $this->model->selectWhereData('tbl_objectives', ['is_delete' => '1'], '*');
+		$response['team_members'] = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*',false);
+		$this->load->view('about',$response);
 	}
 	public function benefits_of_membership() {
 		$response['benefits'] = $this->model->selectWhereData('tbl_member_benefits', ['is_delete' => '1'], '*');
+		// print_r($response['benefits']);die;
 		$this->load->view('benefits-of-membership', $response);
 	}
 	public function join_ihdma(): void {
@@ -239,6 +244,7 @@ class Website extends CI_Controller {
 		$response['individual_category'] = $this->model->selectWhereData('tbl_membership_categories', ['is_delete' => '1','id'=>1], '*');
 		$response['corporate_category'] = $this->model->selectWhereData('tbl_membership_categories', ['is_delete' => '1','id'=>2], '*');
 		$response['membershiptype'] = $this->Member_model->get_membership_types();
+		// print_r($response);die;
 		$this->load->view('join-ihdma',$response);
 	}
 	public function contact_us() {

@@ -39,24 +39,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-6">
                     <div class="title-wrapper-left">
-                        <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Benefits of
-                            Membership</span>
+                        <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s"><?= $benefits['title_benefits'] ?></span>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".8s">
                     <div class="benefits-area">
-                        <ul class="mb-0">
-                            <li>Subscription to IHDMA Journal PDFs</li>
-                            <li>Subscription to <em>Pressure</em> newsletter</li>
-                            <li>Industry updates: legislative and regulatory affairs</li>
-                            <li>Discounts to IHDMA CME/MOC/CEU accredited educational opportunities</li>
-                            <li>Discounts for article searches from the Duke University Medical Center Library and
-                                Archives</li>
-                            <li>MEDFAQs – the IHDMA Frequently Asked Questions (FAQ) system</li>
-                            <li>Three (3) free continuing education credits on our Enduring Materials courses website
-                                per year</li>
-                        </ul>
-
+                        <?= $benefits['benefits']?>                          
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -84,24 +72,7 @@
                 </div>
                 <div class="col-lg-12 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".8s">
                     <div class="activities-area">
-                        <ul class="mb-0">
-                            <li>Monitoring regulatory changes for reimbursement of hyperbaric oxygen therapy services
-                                (US and International)</li>
-                            <li>Development of Clinical Practice Guidelines in Hyperbaric Medicine</li>
-                            <li>Development of credentialing criteria for physician practice</li>
-                            <li>Accreditation of hyperbaric chamber facilities</li>
-                            <li>Development of chamber operational guidelines</li>
-                            <li>Increasing availability of online educational opportunities</li>
-                            <li>Annual live educational opportunities, such as: our Scientific, Chapter and various
-                                courses</li>
-                            <li>Advocacy of high professional standards of practice</li>
-                            <li>Representation to federal, state and local agencies on matters related to efficacy,
-                                standards of care, reimbursement, etc.</li>
-                            <li>Collaborating with professional stakeholders on a global basis</li>
-                            <li>Development of evidence-based indications</li>
-                            <li>Development of Hyperbaric & Wound Care Facility Accreditation standards</li>
-                        </ul>
-
+                        <?= $benefits['activities']?>
 
                     </div>
                 </div>
