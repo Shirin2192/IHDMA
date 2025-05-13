@@ -144,7 +144,7 @@
     </div>
 
     <!-- Modal for Dr. Dhiraj Saxena -->
-    <div class="modal fade teammember" id="teamMemberModal2" tabindex="-1" aria-labelledby="teamMemberModalLabel2"
+    <!-- <div class="modal fade teammember" id="teamMemberModal2" tabindex="-1" aria-labelledby="teamMemberModalLabel2"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -163,10 +163,10 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Modal for Dr. Narayanamurthy -->
-    <div class="modal fade teammember" id="teamMemberModal3" tabindex="-1" aria-labelledby="teamMemberModalLabel3"
+    <!-- <div class="modal fade teammember" id="teamMemberModal3" tabindex="-1" aria-labelledby="teamMemberModalLabel3"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -181,10 +181,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Modal for Dr. Manoj Gupta -->
-    <div class="modal fade teammember" id="teamMemberModal4" tabindex="-1" aria-labelledby="teamMemberModalLabel4"
+    <!-- <div class="modal fade teammember" id="teamMemberModal4" tabindex="-1" aria-labelledby="teamMemberModalLabel4"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -227,7 +227,7 @@
             </div>
         </div>
     </div>
-    
+     -->
 
 
 
