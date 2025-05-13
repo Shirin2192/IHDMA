@@ -24,7 +24,8 @@ class Website extends CI_Controller {
 		$price = $dataArray['price'] ?? '';
 		$symbol = $dataArray['symbol'] ?? '';
 		$type_name = $dataArray['type_name'] ?? '';
-
+		$data['membership_type'] = $this->model->selectWhereData('tbl_membership_types', ['is_delete' => '1'], ['id','type_name'],false);
+		// echo "<pre>";print_r($data['membership_type']);die;
 		$data['price'] = $price;
 		$data['symbol'] = $symbol;
 		$data['type_name'] = $type_name;
@@ -32,6 +33,7 @@ class Website extends CI_Controller {
 	}
 	public function submit_registration()
 	{
+		print_r($_POST);die;
 		$this->load->library('form_validation');
 
 		// Step 1: Form Validation
@@ -59,27 +61,27 @@ class Website extends CI_Controller {
 		}
 
 		// Step 2: Razorpay Signature Verification
-		$razorpay_order_id = $this->input->post('razorpay_order_id');
-		$razorpay_payment_id = $this->input->post('razorpay_payment_id');
-		$razorpay_signature = $this->input->post('razorpay_signature');
+		// $razorpay_order_id = $this->input->post('razorpay_order_id');
+		// $razorpay_payment_id = $this->input->post('razorpay_payment_id');
+		// $razorpay_signature = $this->input->post('razorpay_signature');
 
-		if (!$razorpay_order_id || !$razorpay_payment_id || !$razorpay_signature) {
-			echo json_encode(['status' => 'error', 'message' => 'Incomplete payment information.']);
-			return;
-		}
+		// if (!$razorpay_order_id || !$razorpay_payment_id || !$razorpay_signature) {
+		// 	echo json_encode(['status' => 'error', 'message' => 'Incomplete payment information.']);
+		// 	return;
+		// }
 
-		try {
-			$api = new Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET'); // Replace with real keys
-			$attributes = [
-				'razorpay_order_id' => $razorpay_order_id,
-				'razorpay_payment_id' => $razorpay_payment_id,
-				'razorpay_signature' => $razorpay_signature
-			];
-			$api->utility->verifyPaymentSignature($attributes);
-		} catch (SignatureVerificationError $e) {
-			echo json_encode(['status' => 'error', 'message' => 'Payment verification failed.']);
-			return;
-		}
+		// try {
+		// 	$api = new Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET'); // Replace with real keys
+		// 	$attributes = [
+		// 		'razorpay_order_id' => $razorpay_order_id,
+		// 		'razorpay_payment_id' => $razorpay_payment_id,
+		// 		'razorpay_signature' => $razorpay_signature
+		// 	];
+		// 	$api->utility->verifyPaymentSignature($attributes);
+		// } catch (SignatureVerificationError $e) {
+		// 	echo json_encode(['status' => 'error', 'message' => 'Payment verification failed.']);
+		// 	return;
+		// }
 
 		// Step 3: Save Member Data
 		$password = $this->input->post('password');
@@ -130,31 +132,31 @@ class Website extends CI_Controller {
 
 		echo json_encode(['status' => 'success', 'message' => 'Registration successful.']);
 	}
-	public function create_order()
-	{
-		$this->load->helper('security');
-		$amount = $this->input->post('price'); // price in rupees
+	// public function create_order()
+	// {
+	// 	$this->load->helper('security');
+	// 	$amount = $this->input->post('price'); // price in rupees
 
-		if (!$amount) {
-			echo json_encode(['status' => 'error', 'message' => 'Invalid amount']);
-			return;
-		}
+	// 	if (!$amount) {
+	// 		echo json_encode(['status' => 'error', 'message' => 'Invalid amount']);
+	// 		return;
+	// 	}
 
-		$api = new \Razorpay\Api\Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET');
-		$order = $api->order->create([
-			'receipt'         => 'rcptid_' . time(),
-			'amount'          => $amount * 100, // amount in paise
-			'currency'        => 'INR',
-			'payment_capture' => 1
-		]);
+	// 	$api = new \Razorpay\Api\Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET');
+	// 	$order = $api->order->create([
+	// 		'receipt'         => 'rcptid_' . time(),
+	// 		'amount'          => $amount * 100, // amount in paise
+	// 		'currency'        => 'INR',
+	// 		'payment_capture' => 1
+	// 	]);
 
-		echo json_encode([
-			'status' => 'success',
-			'order_id' => $order['id'],
-			'amount' => $order['amount'],
-			'key_id' => 'YOUR_KEY_ID' // Send to JS for Razorpay checkout
-		]);
-	}
+	// 	echo json_encode([
+	// 		'status' => 'success',
+	// 		'order_id' => $order['id'],
+	// 		'amount' => $order['amount'],
+	// 		'key_id' => 'YOUR_KEY_ID' // Send to JS for Razorpay checkout
+	// 	]);
+	// }
 
 
 	public function login_user()

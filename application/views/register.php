@@ -56,10 +56,14 @@
                                     <label for="membershiptype">Membership Type<span class="required">*</span></label>
                                     <select class="form-control chosen-select" id="membershiptype" name="membershiptype"
                                         data-placeholer="Select Membership Type">
+                                        
                                         <option value=""></option>
-                                        <option value="nursing">Nursing</option>
-                                        <option value="doctor">Doctor</option>
-                                        <option value="corporate">Corporate</option>
+                                        <?php foreach ($membership_type as $membership_type_row) { ?>
+                                            <option value="<?= $membership_type_row['id'] ?>" 
+                                                <?= ($membership_type_row['type_name'] == $type_name) ? 'selected' : '' ?>>
+                                                <?= $membership_type_row['type_name'] ?>
+                                            </option>
+                                        <?php } ?>
                                     </select>
 
                                     <div class="text-danger" id="membershiptypeError" style="font-size: 0.9em;"></div>
