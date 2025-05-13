@@ -6,10 +6,14 @@
 .breadcrumb-area-wrapper h1.title {
     font-size: 64px;
 }
-.breadcrumb-area h5{
+
+.breadcrumb-area h5 {
     color: var(--color-primary);
 }
 
+.modal {
+    overflow-y: hidden;
+}
 
 /* heading rounder */
 .title-wrapper-left .pre {
@@ -26,7 +30,7 @@
 
 .title-wrapper-left .title {
     text-align: left;
-    font-size: 48px;
+    font-size: 35px;
 }
 
 .title-wrapper-center {
@@ -46,9 +50,10 @@
     background: #94d29952;
 }
 
-.userform .modal-header h6{
+.userform .modal-header h6 {
     color: var(--color-primary);
 }
+
 /* Homepage */
 
 /* Banner section */
@@ -70,6 +75,37 @@
     font-weight: 500;
 }
 
+
+.welcome-section form a.rts-btn {
+    background: #fff;
+    color: var(--color-primary);
+}
+
+.welcome-section form a.rts-btn img {
+    filter: brightness(0) saturate(100%) invert(30%) sepia(70%) saturate(3539%) hue-rotate(234deg) brightness(110%) contrast(98%);
+}
+
+.welcome-section-wrapper {
+    padding: 40px 200px !important;
+    background: #ddf1de;
+}
+
+.welcome-section-wrapper {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.welcome-section-wrapper .pre {
+    border-radius: 30px;
+    color: #242424;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.welcome-section-wrapper .title {
+    color: #242424;
+}
 
 .about-us-section .about-image-left-wrapper {
     position: relative;
@@ -456,16 +492,19 @@
     background: none;
     outline: none;
 }
-.login-section .container{
+
+.login-section .container {
     max-width: 60%;
 }
-.login-section .login-box{
+
+.login-section .login-box {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-radius: 15px;
     border: 1px solid #ebebeb;
     padding: 25px;
 }
-.login-section .required{
+
+.login-section .required {
     color: red;
 }
 
@@ -475,6 +514,7 @@
     font-size: 16px;
     text-align: left;
 }
+
 .switch-field {
     display: flex;
     overflow: hidden;
@@ -508,7 +548,7 @@
     text-transform: uppercase;
 }
 
-.switch-field input:checked + label {
+.switch-field input:checked+label {
     background-color: #F49124;
     box-shadow: none;
     color: #ffffff;
@@ -518,7 +558,7 @@
     border-radius: 0 4px 4px 0;
 }
 
-.infoswitch .form-check-label{
+.infoswitch .form-check-label {
     font-size: 14px;
 }
 
@@ -527,9 +567,9 @@
     position: relative;
     padding: 4px 10px 0 23px;
     cursor: pointer;
-  }
-  
-  .radiolabel label {
+}
+
+.radiolabel label {
     color: #636363;
     font-size: 14px;
     font-weight: 400;
@@ -537,8 +577,9 @@
     padding: 3px 20px;
     padding-left: 28px;
     margin-right: 10px;
-  }
-  .customRadio input[type="radio"]+label:before {
+}
+
+.customRadio input[type="radio"]+label:before {
     content: '';
     background: #fff;
     border: 2px solid #F49124;
@@ -548,8 +589,9 @@
     position: absolute;
     top: 4px;
     left: 0;
-  }
-  .customRadio input[type="radio"]+label:after {
+}
+
+.customRadio input[type="radio"]+label:after {
     content: '';
     background: #F49124;
     width: 10px;
@@ -561,20 +603,23 @@
     opacity: 0;
     transform: scale(2);
     transition: transform 0.3s linear, opacity 0.3s linear;
-  }
-  .customRadio input[type="radio"] {
+}
+
+.customRadio input[type="radio"] {
     position: absolute;
     left: 0;
     z-index: -1;
     width: 1rem;
     height: 1.25rem;
     opacity: 0;
-  }
-  .customRadio input[type="radio"]:checked+label:after {
+}
+
+.customRadio input[type="radio"]:checked+label:after {
     opacity: 1;
     transform: scale(1);
-  }
-  .text-danger {
+}
+
+.text-danger {
     color: red;
     font-size: 0.875rem;
     margin-top: 2px;

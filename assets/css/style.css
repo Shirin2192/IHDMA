@@ -652,7 +652,8 @@ ol ul {
 .m--0 {
   margin: 0;
 }
-.rts-section-gap1{
+
+.rts-section-gap1 {
   padding: 20px 0;
 }
 
@@ -703,6 +704,7 @@ ol ul {
     padding-top: 60px;
   }
 }
+
 .rts-section-gap2 {
   padding: 80px 0;
 }
@@ -9573,6 +9575,7 @@ input[type=radio]~label::after {
   margin-bottom: 20px;
   position: relative;
 }
+
 .form-group .input-icon {
   color: #f49124;
   font-size: 18px;
@@ -9581,6 +9584,7 @@ input[type=radio]~label::after {
   top: 50%;
   left: 20px;
 }
+
 .form-group label {
   margin-bottom: 6px;
   font-size: 14px;
@@ -9658,7 +9662,7 @@ input[type=submit]:hover {
   transform: translateY(-5px);
 }
 
-.login-btn{
+.login-btn {
   width: 100%;
   padding: 0 30px;
   border-radius: 500px;
@@ -9672,19 +9676,22 @@ input[type=submit]:hover {
   border: 2px solid var(--color-primary);
   transition: var(--transition);
 }
-.remember-forgot span{
+
+.remember-forgot span {
   font-size: 14px;
 }
 
-.userform .modal-content{
+.userform .modal-content {
   border-radius: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: none;
   padding: 20px;
 }
-.userform .modal-dialog{
+
+.userform .modal-dialog {
   max-width: 30%;
 }
+
 body.modal-open {
   overflow: hidden !important;
   padding-right: 0 !important;
@@ -14522,13 +14529,15 @@ Copyright (c) 2015 Daniel Eden
   font-size: 14px;
   width: 250px;
 }
-.header-right-user .user-icon{
+
+.header-right-user .user-icon {
   border: 1px solid #45D251;
   border-radius: 50%;
   width: 45px;
   height: 45px;
 }
-.header-right-user .user-icon i{
+
+.header-right-user .user-icon i {
   color: #45D251;
   font-size: 20px;
 }
@@ -14693,17 +14702,19 @@ input:focus {
 .login-link a:hover {
   text-decoration: underline;
 }
+
 #authTabs .nav-link.active {
   padding: 10px 30px;
-    color: #F49124;
-    font-size: 18px;
-    font-weight: 500;
-    /* border-color: #615efc; */
+  color: #F49124;
+  font-size: 18px;
+  font-weight: 500;
+  /* border-color: #615efc; */
 }
+
 #authTabs .nav-link {
   padding: 10px 30px;
-    color: #6B6B6B;
-    font-size: 18px;
+  color: #6B6B6B;
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -15651,7 +15662,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .social-area-tranaparent ul li a i {
   color: #fff;
   padding: 11px 3px;
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .rts-btn {
@@ -18868,44 +18879,7 @@ header .rts-btn {
   }
 }
 
-.appoinment-area-main form a.rts-btn {
-  background: #fff;
-  color: var(--color-primary);
-}
 
-.appoinment-area-main form a.rts-btn img {
-  filter: brightness(0) saturate(100%) invert(30%) sepia(70%) saturate(3539%) hue-rotate(234deg) brightness(110%) contrast(98%);
-}
-
-.request-appoinemnt-area-main-wrapper {
-  background-image: url(../images/appoinment/03.jpg);
-  padding: 76px 0 !important;
-}
-
-.request-appoinemnt-area-main-wrapper {
-  text-align: center;
-  border-radius: 10px;
-}
-
-.request-appoinemnt-area-main-wrapper .pre {
-  border-radius: 30px;
-  padding: 5px 16px;
-  color: #ffffff;
-  margin-bottom: 30px;
-  text-align: center;
-  display: block;
-  max-width: max-content;
-  margin: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.request-appoinemnt-area-main-wrapper .title {
-  margin-top: 20px;
-  color: #fff;
-  font-size: 64px;
-  line-height: 1;
-  margin-bottom: 30px;
-}
 
 @media only screen and (max-width: 991px) {
   .request-appoinemnt-area-main-wrapper .title {
@@ -19387,6 +19361,7 @@ header .rts-btn {
   border-radius: 10px;
   border: 1px solid var(--color-primary);
   transition: 0.3s;
+  width: 275px;
 }
 
 .single-team-area-start.team-absolute-bottom .bottom .social-area-tranaparent {
@@ -19404,6 +19379,10 @@ header .rts-btn {
 
 .single-team-area-start.team-absolute-bottom .bottom p {
   transition: 0.3s;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  width: 250px;
 }
 
 .single-team-area-start.team-absolute-bottom:hover .thumbnail img {
@@ -23005,23 +22984,19 @@ li.has-dropdown:hover .submenu {
   font-weight: 500;
 }
 
-.teammember .team{
+.teammember .team {
   width: 50%;
   margin: auto;
   display: table;
 }
 
-.teammember .modal-dialog{
+.teammember .modal-dialog {
   top: 10%;
 }
-.teammember .modal-content{
+
+.teammember .modal-content {
   border-radius: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: none;
   padding: 20px;
 }
-
-
-
-
-

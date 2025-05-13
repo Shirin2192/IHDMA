@@ -94,24 +94,10 @@
     </div>
     <!-- banner area end -->
 
-    <!-- welcome area start -->
-    <div class="welcome-section mt--80">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="welcome-section-wrapper bg_image rts-section-gap">
-                        <p class="pre">Welcome</p>
-                        <h6 class="title mb-0">
-                            The Undersea and Hyperbaric Medical Society (UHMS) is an international non-profit
-                            organization serving members from more than 67 countries. The UHMS is the primary source of
-                            scientific information for diving and hyperbaric medicine physiology worldwide.<br>
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- welcome area end -->
+
+    
+
+
 
     <!-- about area start -->
     <div class="about-us-section rts-section-gap2">
@@ -502,9 +488,8 @@
                                         </ul>
                                     </div>
                                     <h6 class="title">Dr. Manoj Gupta</h6>
-                                    <p class="mb-0 mt-3">Qualified Hyperbaric Physician | Director, Prana Wound Care &
-                                        Hyperbaric Oxygen
-                                        Therapy Centre</p>
+                                    <p class="mb-0 mt-3">Qualified Hyperbaric Physician | Director, Prana Wound Care & Hyperbaric Oxygen
+                                    Therapy Centre</p>
                                 </div>
                             </div>
                         </div>
@@ -623,7 +608,7 @@
                     <h5 class="modal-title" id="teamMemberModalLabel4">Dr. Manoj Gupta</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                    <div class="modal-body">
                     <p>Dr. Manoj Gupta is a pioneering figure in hyperbaric medicine, with extensive expertise in wound
                         care, diving medicine, and advanced oxygen therapy. As the Director of Prana Hyperbaric Oxygen
                         Therapy Centre and a leader in the field, he has played a significant role in bringing HBOT to
