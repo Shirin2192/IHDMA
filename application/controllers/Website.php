@@ -231,7 +231,17 @@ class Website extends CI_Controller {
 	public function about() {
 		$response['about'] = $this->model->selectWhereData('tbl_about_us', ['is_delete' => '1'], '*');
 		$response['objectives'] = $this->model->selectWhereData('tbl_objectives', ['is_delete' => '1'], '*');
-		$response['team_members'] = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*',false);
+		$data = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*', false);
+
+			// Reorder manually
+			$reordered = [
+				$data[2],
+				$data[3],
+				$data[1],
+				$data[0],
+			];
+
+			$response['team_members'] = $reordered;
 		$this->load->view('about',$response);
 	}
 	public function benefits_of_membership() {

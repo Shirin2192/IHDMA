@@ -130,7 +130,7 @@
     <!-- Modal for Dr. Himanshu Agarwal -->
     <div class="modal fade teammember" id="teamMemberModal1" tabindex="-1" aria-labelledby="teamMemberModalLabel1"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title member_name" id="teamMemberModalLabel1"></h5>
@@ -180,7 +180,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Set modal content
         modal.querySelector('.member_name').textContent = name;
-        modal.querySelector('#member_description').textContent = description;
+        modal.querySelector('#member_description').innerHTML = description;
+
 
         // Optionally add more:
         // modal.querySelector('.modal-body').innerHTML += `<img src="${photo}" class="img-fluid mb-2"/>`;
