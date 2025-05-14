@@ -143,93 +143,6 @@
         </div>
     </div>
 
-    <!-- Modal for Dr. Dhiraj Saxena -->
-    <!-- <div class="modal fade teammember" id="teamMemberModal2" tabindex="-1" aria-labelledby="teamMemberModalLabel2"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="teamMemberModalLabel2">Dr. Dhiraj Saxena</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="mb-0">Dr Dhiraj Saxena is practicing Consultant Physician in Apollo Hospital Ahmedabad
-                        since 15 years and has to his credit establishing the first Hyperbaric Oxygen Therapy unit in
-                        Apollo Hospital, Ahmedabad in 2007 (The first HBOT center in Gujarat).</p>
-                    <p>He has a keen interest in Hyperbaric medicine procedures and problem wound management. Over the
-                        last 10 years he has helped in establishing New Hyperbaric Oxygen therapy centers in Banglore ,
-                        Jaipur, Katni, Miraj , Ahmedabad and he has trained technicians in HBOT procedures. </p>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Modal for Dr. Narayanamurthy -->
-    <!-- <div class="modal fade teammember" id="teamMemberModal3" tabindex="-1" aria-labelledby="teamMemberModalLabel3"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="teamMemberModalLabel3">Dr. Narayanamurthy</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
-                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Modal for Dr. Manoj Gupta -->
-    <!-- <div class="modal fade teammember" id="teamMemberModal4" tabindex="-1" aria-labelledby="teamMemberModalLabel4"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="teamMemberModalLabel4">Dr. Manoj Gupta</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                    <div class="modal-body">
-                    <p>Dr. Manoj Gupta is a pioneering figure in hyperbaric medicine, with extensive expertise in wound
-                        care, diving medicine, and advanced oxygen therapy. As the Director of Prana Hyperbaric Oxygen
-                        Therapy Centre and a leader in the field, he has played a significant role in bringing HBOT to
-                        the forefront of modern wellness and regenerative medicine.</p>
-                    <h5 class="mb-3">Qualifications & Expertise</h5>
-                    <ul>
-                        <li>PhD Scholar in Public Health</li>
-                        <li>MBBS, MD, DNB, LLB, PGDHA</li>
-                        <li>Certificate of Added Qualification (CAQ) in Hyperbaric Medicine (UHMS, USA)</li>
-                        <li>B.Sc. Hons. (Hyperbaric Medicine), Stellenbosch University, South Africa</li>
-                        <li>Certified Hyperbaric Specialist – American Board of Wound Healing</li>
-                        <li>Fellow of the American Professional Wound Care Association</li>
-                        <li>Level I Medical Examiner of Divers (DMAC/EDTC, UK)</li>
-                        <li>Faculty at HBOT Academy, recognized by Maharashtra University of Health Sciences</li>
-                        <li>Director & Founder President of the Indian Hyperbaric and Diving Medicine Association</li>
-                    </ul>
-                    <h5 class="mb-3">Publications & Contributions</h5>
-                    <p>Dr. Gupta has authored multiple research papers and textbooks on hyperbaric oxygen therapy,
-                        including "Hyperbaric Oxygen Therapy: Principles and Applications" and several journal articles
-                        on HBOT’s role in wound care, regenerative medicine, and neurology. He has also presented at
-                        prestigious medical conferences and trained doctors globally in hyperbaric medicine.
-                    </p>
-
-                    <h5 class="mb-3">Vision for HBOT</h5>
-                    <p>Dr. Gupta believes that hyperbaric oxygen therapy is the future of medicine and wellness,
-                        offering unparalleled benefits in cellular regeneration, cognitive enhancement, and healing.
-                        With its potential to revolutionize recovery, performance, and longevity, HBOT is at the
-                        forefront of non-invasive, science-backed healthcare solutions.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-     -->
-    
-
 
 
     <!-- footer Start -->
@@ -247,9 +160,9 @@
     <!-- progress area end -->
     <?php include('common/js_files.php');?>
     <script>
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('teamMemberModal1');
-
+        
     modal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
 
