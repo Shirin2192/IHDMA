@@ -57,17 +57,17 @@
 /* Homepage */
 
 /* Banner section */
-.banner-section .banner-wrapper-bg {
+/* .banner-section .banner-wrapper-bg {
     background-image: url(../images/banner/banner.webp);
-}
+} */
 
-.banner-section .banner-wrapper-bg.bg-2-banner-2 {
+/* .banner-section .banner-wrapper-bg.bg-2-banner-2 {
     background-image: url(../images/banner/banner2.webp);
 }
 
 .banner-section .banner-wrapper-bg.bg-2-banner-3 {
     background-image: url(../images/banner/banner3.webp);
-}
+} */
 
 .banner-content-area .pre-title span {
     color: #242424;

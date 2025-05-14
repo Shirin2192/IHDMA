@@ -15889,17 +15889,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   }
 }
 
-.banner-wrapper-bg {
-  background-image: url(../images/banner/12.jpg);
-}
 
-.banner-wrapper-bg.bg-2-banner-2 {
-  background-image: url(../images/banner/10.jpg);
-}
-
-.banner-wrapper-bg.bg-2-banner-3 {
-  background-image: url(../images/banner/11.jpg);
-}
 
 /* .banner-content-area.style-two .pre-title span {
   color: #242424;
@@ -16014,7 +16004,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .swiper-slide-active .float-right {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  transition-delay: 1400ms;
+  transition-delay: 1000ms;
 }
 
 .float-right-1 {

@@ -23,7 +23,7 @@
         <div class="swiper banner-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="banner-wrapper-bg bg_image ptb--80">
+                    <div class="banner-wrapper-bg bg_image ptb--80" style="background-image: url(assets/images/banner/banner.webp);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
@@ -44,9 +44,10 @@
                     </div>
                 </div>
                 <!-- single swiper -->
+
                 <!-- single swiper -->
                 <div class="swiper-slide">
-                    <div class="banner-wrapper-bg bg-2-banner-2 bg_image ptb--80 ptb_sm--100">
+                    <div class="banner-wrapper-bg bg-2-banner-2 bg_image ptb--80 ptb_sm--100" style=" background-image: url(assets/images/banner/banner2.webp);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
@@ -68,7 +69,7 @@
                 <!-- single swiper -->
                 <!-- single swiper -->
                 <div class="swiper-slide">
-                    <div class="banner-wrapper-bg bg-2-banner-3 bg_image ptb--80 ptb_sm--100">
+                    <div class="banner-wrapper-bg bg-2-banner-3 bg_image ptb--80 ptb_sm--100" style=" background-image: url(assets/images/banner/banner3.webp);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
