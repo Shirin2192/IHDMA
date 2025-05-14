@@ -303,4 +303,10 @@ class Website extends CI_Controller {
             echo json_encode(['status' => true, 'message' => 'Form submitted successfully.']);
         }
     }
+	public function facility_acc(){
+		$this->load->view('facility-acc');
+	}
+	public function hbo_indications(){
+		$this->load->view('hbo-indications');
+	}
 }

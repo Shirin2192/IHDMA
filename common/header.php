@@ -44,7 +44,8 @@
                     <div class="single-contact-area">
                         <i class="fa-light fa-phone"></i>
                         <div class="information">
-                            <span>Whatsapp No: <br><a href= "https://wa.me/919930729923" target="_blank"> +919930729923 </a> </span>
+                            <span>Whatsapp No: <br><a href="https://wa.me/919930729923" target="_blank"> +919930729923
+                                </a> </span>
                         </div>
                     </div>
                     <div class="menu-btn" id="menu-btn">
@@ -91,16 +92,18 @@
                                     </ul>
                                 </li>
                                 <li class="main-nav"><a href="#">HBOT Regulations for India</a></li>
-                                <li class="main-nav has-dropdown"><a href="#">Facility Accreditation</a>
+                                <li class="main-nav has-dropdown"><a href="<?= base_url()?>website/facility_acc">Facility Accreditation</a>
                                     <ul class="submenu parent-nav">
-                                        <li><a href="#">Accreditation Support System</a></li>
+                                        <li><a href="#">Accreditation Support Forum</a></li>
+                                        <li><a href="#">Benefits of Accreditation</a></li>
+                                        <li><a href="#">Process to get Accreditation</a></li>
                                     </ul>
                                 </li>
                                 <li class="main-nav has-dropdown"><a href="#">Resources</a>
                                     <ul class="submenu parent-nav">
                                         <li><a href="#">Position Statement</a></li>
                                         <li><a href="#">Chamber Directory</a></li>
-                                        <li><a href="#">HBO Indication</a></li>
+                                        <li><a href="<?= base_url()?>website/hbo_indications">HBO Indication</a></li>
                                         <li><a href="#">Links</a></li>
                                         <li><a href="#">Multicenter Registry For Hyperbaric Oxygen Therapy</a></li>
                                         <li><a href="#">News & Announcements</a></li>

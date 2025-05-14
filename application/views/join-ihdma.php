@@ -189,7 +189,7 @@
                                 <span class="pre mb-5 wow fadeInUp" data-wow-delay=".2s"
                                     data-wow-duration=".8s">Categories</span>
                                 <h2 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
-                                    Corporate Partner Categories
+                                    Corporate Membership Categories
                                 </h2>
                                 <p class="disc text-center wow fadeInUp mb-5" data-wow-delay=".6s"
                                     data-wow-duration=".8s">

@@ -56,10 +56,10 @@
   --line-height-b2: 26px;
   --line-height-b3: 1.7;
   --h1: 60px;
-  --h2: 48px;
+  --h2: 35px;
   --h3: 30px;
   --h4: 26px;
-  --h5: 24px;
+  --h5: 22px;
   --h6: 18px;
 }
 
@@ -314,7 +314,7 @@ p {
   line-height: var(--line-height-b2);
   font-weight: var(--p-regular);
   color: var(--color-body);
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -708,7 +708,9 @@ ol ul {
 .rts-section-gap2 {
   padding: 80px 0;
 }
-
+.rts-section-gap20 {
+  padding: 45px 0;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gap2 {
     padding: 80px 0;
@@ -15685,7 +15687,10 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   gap: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+ .btn-primary:focus{
+  box-shadow: none;
+  border:none;
+ }
 .rts-btn.btn-primary img {
   margin-right: 2px;
 }
@@ -15928,12 +15933,12 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   color: #111032;
 }
 
-.mySwiper-banner-2 {
+.banner-swiper {
   position: relative;
 }
 
-.mySwiper-banner-2 .swiper-button-next,
-.mySwiper-banner-2 .swiper-button-prev {
+.banner-swiper .swiper-button-next,
+.banner-swiper .swiper-button-prev {
   background-image: none;
   height: 40px;
   width: 40px;
@@ -15946,35 +15951,35 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background: var(--color-secondary);
 }
 
-.mySwiper-banner-2 .swiper-button-next i,
-.mySwiper-banner-2 .swiper-button-prev i {
+.banner-swiper .swiper-button-next i,
+.banner-swiper .swiper-button-prev i {
   color: #fff;
   transition: 0.3s;
 }
 
-.mySwiper-banner-2 .swiper-button-next:hover,
-.mySwiper-banner-2 .swiper-button-prev:hover {
+.banner-swiper .swiper-button-next:hover,
+.banner-swiper .swiper-button-prev:hover {
   background: var(--color-primary);
   border: 1px solid var(--color-primary);
 }
 
-.mySwiper-banner-2 .swiper-button-next:hover i,
-.mySwiper-banner-2 .swiper-button-prev:hover i {
+.banner-swiper .swiper-button-next:hover i,
+.banner-swiper .swiper-button-prev:hover i {
   color: #fff;
 }
 
-.mySwiper-banner-2 .swiper-button-prev {
+.banner-swiper .swiper-button-prev {
   left: 80px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-  .mySwiper-banner-2 .swiper-button-prev {
+  .banner-swiper .swiper-button-prev {
     left: 30px;
   }
 }
 
 @media only screen and (max-width: 1199px) {
-  .mySwiper-banner-2 .swiper-button-prev {
+  .banner-swiper .swiper-button-prev {
     right: 120px;
     bottom: 30px;
     top: auto;
@@ -15982,19 +15987,19 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   }
 }
 
-.mySwiper-banner-2 .swiper-button-next {
+.banner-swiper .swiper-button-next {
   right: 80px;
   left: auto;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-  .mySwiper-banner-2 .swiper-button-next {
+  .banner-swiper .swiper-button-next {
     right: 30px;
   }
 }
 
 @media only screen and (max-width: 1199px) {
-  .mySwiper-banner-2 .swiper-button-next {
+  .banner-swiper .swiper-button-next {
     right: 40px;
     bottom: 30px;
     top: auto;

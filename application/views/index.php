@@ -20,7 +20,7 @@
 
     <!-- banner area start -->
     <div class="banner-section">
-        <div class="swiper mySwiper-banner-2">
+        <div class="swiper banner-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="banner-wrapper-bg bg_image ptb--80">
@@ -102,7 +102,7 @@
                     <div class="welcome-section-wrapper bg_image rts-section-gap">
                         <p class="pre">Welcome</p>
                         <h6 class="title mb-0">
-                            The Undersea and Hyperbaric Medical Society (UHMS) is an international non-profit
+                            Indian Hyperbaric and Diving Medicine Association (IHDMA) is an international non-profit
                             organization serving members from more than 67 countries. The UHMS is the primary source of
                             scientific information for diving and hyperbaric medicine physiology worldwide.<br>
                         </h6>
@@ -200,15 +200,22 @@
                                 the
                                 ranks of student members are rapidly expanding.
                             </p>
-                            <div class="d-flex services-btn flex-direction-column">
-                                <a href="<?=base_url()?>website/benefits_of_membership"
-                                    class="rts-btn btn-primary">Member Benefits
-                                    <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                                </a>
-                                <a href="<?=base_url()?>website/join_ihdma" class="rts-btn btn-primary ms-3">Become a
-                                    member
-                                    <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                                </a>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <a href="<?=base_url()?>website/benefits_of_membership"
+                                        class="rts-btn btn-primary">Member Benefits
+                                        <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                            alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a href="<?=base_url()?>website/join_ihdma" class="rts-btn btn-primary">Become a
+                                        member
+                                        <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                            alt="">
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -224,31 +231,31 @@
                                 equipment,
                                 staff and training to ensure that the utmost quality is maintained within our specialty.
                             </p>
-                            <div class="d-flex services-btn">
-                                <a href="#" class="rts-btn btn-primary">Facility Acc. Program
-                                    <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                                </a>
-                                <a href="#" class="rts-btn btn-primary ms-3">Map of Acc. Facilities
-                                    <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                                </a>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <a href="#" class="rts-btn btn-primary">Facility Acc. Program
+                                        <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                            alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a href="#" class="rts-btn btn-primary">Map of Acc. Facilities
+                                        <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                            alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
-
     </div>
     <!-- service area end -->
 
 
     <!-- General area start -->
-    <div class="general-section rts-section-gap2 bg-light">
+    <div class="general-section rts-section-gap20 bg-light">
         <div class="container">
             <div class="row g-5">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay=".2s"
@@ -345,107 +352,202 @@
                     </div>
                 </div>
             </div>
-            <div class="row g-75 mt--0">
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">
-                    <div class="single-pricing-area">
-                        <div class="pricing-head">
-                            <h6 class="title">Individual Membership Categories
-                            </h6>
-                            <span>Lifetime Membership
-                            </span>
-                            <h3 class="price">INR 5,000</h3>
 
-                        </div>
-                        <div class="body">
+            <div class="swiper membershipplan mt--0 g-75">
+                <div class="swiper-wrapper">
 
-                            <div class="read-block">
-                                <p class="disc mb-0">
-                                    Regular Members of the Society shall be physicians or doctorate-level health care
-                                    professionals
-                                    (e.g., MD, DO, PhD, DPM, DDS, or equivalent).
-                                    <span class="dots">...</span>
-                                    <span class="more-text">
-                                        This category may also include Associates granted membership as exceptional
-                                        cases by the Board of Directors (BOD).
-                                    </span>
-                                </p>
-                                <span class="read-toggle">Read more</span>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area">
+                            <div class="pricing-head">
+                                <h6 class="title">Individual Membership</h6>
+                                <span class="subheading">Lifetime Membership</span>
+                                <h3 class="price">INR 5,000</h3>
                             </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Regular Members of the Society shall be physicians or doctorate-level health
+                                        care professionals (MD, DO, PhD, DPM, DDS, or equivalent).
+                                        <span class="dots"></span>
+                                        <span class="more-text">
+                                            This category will include those Associates waived by the BOD as
+                                            exceptional cases.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
 
-                            <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now <img
-                                    src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now
+                                    <img src="https://sda.in.net/web/IHDMA/assets/images/banner/icons/arrow--up-right.svg"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area active">
+                            <div class="pricing-head">
+                                <h6 class="title title1">Corporate Membership</h6>
+                                <span class="subheading">Silver Corporate Partner
+                                </span>
+                                <h3 class="price price1">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Two (2) individual memberships and Banner displayed
+                                        <span class="dots"></span>
+                                        <span class="more-text"> on the Corporate page.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area">
+                            <div class="pricing-head">
+                                <h6 class="title">Individual Membership</h6>
+                                <span class="subheading">Associate Membership</span>
+                                <h3 class="price">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Hyperbaric technician, registered nurse, physician assistant, nurse
+                                        practitioner, undergraduate student, diving supervisor, certified scuba
+                                        instructor, or other hyperbaric or diving personnel with specialized
+                                        technical
+                                        <span class="dots"></span>
+                                        <span class="more-text">or research backgrounds but who do not possess the
+                                            academic background for Regular Membership can become Associate Members
+                                            of the Society. Regular Members (retired) who are 65 or older and are
+                                            not working can also fall under this category; however they will not
+                                            have voting rights. Associate Members are not entitled to vote or hold
+                                            office for the Regular Membership positions on the Board of Directors,
+                                            but are eligible to vote and hold office for the Associate positions on
+                                            the Board.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area active">
+                            <div class="pricing-head">
+                                <h6 class="title title1">Corporate Membership</h6>
+                                <span class="subheading">Gold Corporate Partner</span>
+                                <h3 class="price price1">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Three (3) individual memberships, emails sent by UHMS on behalf of the
+                                        corporate partner, Banner displayed
+                                        <span class="dots"></span>
+                                        <span class="more-text">on the Corporate page.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area">
+                            <div class="pricing-head">
+                                <h6 class="title">Individual Membership</h6>
+                                <span class="subheading">Student Membership</span>
+                                <h3 class="price">Free
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Must submit a letter from the Registrar confirming full-time enrollment and
+                                        the program the student is currently enrolled in. Must be a full-time
+                                        student enrolled in undergraduate or graduate programs
+                                        <span class="dots"></span>
+                                        <span class="more-text">in a related field of nursing, medicine or science.
+                                            Student members will receive online access to the IHDMA Journal and our
+                                            membership newsletter, Pressure along with all other membership
+                                            benefits. This membership type is non-paying and eligibility must be
+                                            confirmed annually with enrollment information. Student members are not
+                                            eligible to vote or hold office.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Slide6 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area active">
+                            <div class="pricing-head">
+                                <h6 class="title title1">Corporate Membership</h6>
+                                <span class="subheading">Platinum Corporate Partner
+                                </span>
+                                <h3 class="price price1">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Four (4) individual memberships, emails sent by IHDMA on behalf of the
+                                        corporate partner,
+                                        <span class="dots"></span>
+                                        <span class="more-text">Banner displayed on the Corporate and Vendor pages.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now <img
+                                        src="https://sda.in.net/web/IHDMA/assets/images/banner/icons/arrow--up-right.svg"
+                                        alt=""></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
-                    <div class="single-pricing-area active">
-                        <div class="pricing-head">
-                            <h6 class="title title1">Corporate Partner <br> Categories
-                            </h6>
-                            <span>Diamond Corporate Partner
-                            </span>
-                            <h3 class="price price1">INR 5,000
-                            </h3>
-                        </div>
-                        <div class="body">
-                            <div class="read-block">
-                                <p class="disc mb-0">
-                                    Five (5) individual memberships, emails sent by IHDMA on behalf of the corporate
-                                    partner, and a banner displayed on the Corporate, Vendor, and the IHDMA Home pages.
-                                    <span class="dots">...</span>
-                                    <span class="more-text">
-                                        These benefits ensure that the corporate partner's presence is prominently
-                                        featured across multiple platforms, enhancing their visibility and outreach. The
-                                        individual memberships provide exclusive access to members-only events and
-                                        networking opportunities, while the email promotions increase engagement and
-                                        awareness.
-                                    </span>
-                                </p>
-                                <span class="read-toggle">Read more</span>
-                            </div>
 
-                            <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now <img
-                                    src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".8s">
-                    <div class="single-pricing-area">
-                        <div class="pricing-head">
-                            <h6 class="title">Individual Membership Categories
-                            </h6>
-                            <span>Associate Membership
-                            </span>
-                            <h3 class="price">INR 5,000
-                            </h3>
 
-                        </div>
-                        <div class="body">
-                            <div class="read-block">
-                                <p class="disc mb-0">
-                                    Individuals such as hyperbaric technicians, registered nurses, physician assistants,
-                                    nurse practitioners, undergraduate students, diving supervisors, certified scuba
-                                    instructors, or other hyperbaric or diving personnel with specialized technical or
-                                    research backgrounds—but who do not meet the academic qualifications for Regular
-                                    Membership—may become Associate Members of the Society. Regular Members (retired),
-                                    aged 65 or older and no longer working, may also qualify under this category;
-                                    however, they will not have voting rights. While Associate Members are not entitled
-                                    to vote or hold office for Regular Membership positions on the Board of Directors,
-                                    they are eligible to vote and hold office for the Associate positions on the Board.
-                                </p>
-                                <span class="read-toggle">Read more</span>
-                            </div>
 
-                            <a href="<?= base_url()?>website/register" class="rts-btn btn-primary">Join Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5 mb-5">
-                <a href="#" class="btn-transparent">Show More Membership <i
-                        class="fa-solid fa-arrow-right-long"></i></a>
             </div>
         </div>
+        <div class="text-center mt-5">
+            <a href="<?= base_url()?>website/register" class="btn-transparent">Show More Membership <i
+                    class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </div>
     </div>
     <!-- membership area end -->
 
@@ -659,6 +761,125 @@
         </div>
     </div>
 
+    <!-- publication section start -->
+    <div class="publication-section rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="title-wrapper-left">
+                                <span class="pre wow fadeInUp mb-5" data-wow-delay=".2s"
+                                    data-wow-duration=".8s">Publications</span>
+                                <div class="row services-btn">
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="rts-btn btn-primary"> About the IHDMA Journal
+                                            <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="rts-btn btn-primary">Download IHDMA Journal PDFs
+                                            <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="rts-btn btn-primary col-md-12">Pressure PDFs (2011-Present)
+                                            <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <a href="#" class="rts-btn btn-primary col-md-12">IHDMA Journal Ahead Of
+                                            Print-Public
+                                            <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="title-wrapper-left">
+                                <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Featured
+                                    News</span>
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p> VOLUME 50: THE UHM JOURNAL CELEBRATES A MILESTONE
+                                                WITH THE
+                                                PUBLICATION OF THIS ISSUE</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p>FDA recommends UHMS-accredited hyperbaric
+                                                facilities for treatment of specific illnesses</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p>Emergent HBO2 Access Issue</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p>AMA: Changes in Medicare Physician Spending During the COVID-19 Pandemic
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p>Alliance Summary of CY 2021 Physician Fee Schedule and Quality: Physician
+                                                Payment Final Rule</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="title-wrapper-left">
+                                <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Upcoming
+                                    Courses</span>
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p> Mayo Clinic: Diving and Hyperbaric Medicine 2025</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p>DAN-UHMS Diving and Hyperbaric Medicine Course - Core Concepts – Week 1
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-file me-4"></i>
+                                            <p>DAN-UHMS Diving and Hyperbaric Medicine Course - Core Concepts – Week 2
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- publcation section end -->
+
     <!-- Latest event area start -->
     <div class="latestevent-section rts-section-gap bg-light">
         <div class="container">
@@ -778,73 +999,83 @@
     <!-- Latest event area end -->
 
 
-    <!-- publication section start -->
-    <div class="why-choose-us-area rts-section-gap">
+
+    <!-- FAQs section start -->
+    <div class="faq-section rts-section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="why-choose-area-wrapper">
-                        <div class="row align-items-end">
-                            <div class="col-xl-6 col-lg-6 mb_md--80 mb_sm--60">
-                                <div class="why-choose-us-area-wrapper-main">
-                                    <div class="title-wrapper-left">
-                                        <span class="pre wow fadeInUp" data-wow-delay=".2s"
-                                            data-wow-duration=".8s">Publications</span>
-                                        <h2 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
-                                            About the IHDMA Journal
-                                        </h2>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="title-wrapper-left">
+                                <span class="pre wow fadeInUp mb-5" data-wow-delay=".2s"
+                                    data-wow-duration=".8s">MEDFAQs</span>
+                                <p>MEDFAQs is the UHMS Frequently Asked Questions (FAQ) system. This system is a benefit
+                                    of UHMS membership. Non-members can see the categories of questions we have, plus
+                                    all questions and answers in the Safety category. Members will be able to see all of
+                                    the questions, as well submit new questions.</p>
+                                <a href="#" class="rts-btn btn-primary">Visit MEDFAQs
+                                    <img src="http://localhost/IHDMA/assets/images/banner/icons/arrow--up-right.svg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="title-wrapper-left">
+                                <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">QUARC</span>
+                                <p>QUARC's mission is to promote quality of care in hyperbaric medicine practice and
+                                    ensure patient access to hyperbaric services through effective advocacy in the
+                                    regulatory, public policy and legislative arenas. The QUARC webpage is designed to
+                                    provide the most up-to-date information on regulatory, public policy and legislative
+                                    issues facing our membership and field.</p>
+                                <a href="#" class="rts-btn btn-primary">Visit QUARC
+                                    <img src="http://localhost/IHDMA/assets/images/banner/icons/arrow--up-right.svg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="title-wrapper-left">
+                                <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Important
+                                    Links</span>
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-link me-4"></i>
+                                            <p> NEW - Clinical Hyperbaric Facility Accreditation Manual Fourth Edition
+                                            </p>
+                                        </a>
                                     </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-link me-4"></i>
+                                            <p>Find the latest information on regulatory, public policy and legislative
+                                                issues affecting our industry
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <a href="#" class="news-title d-flex align-items-center">
+                                            <i class="fa-solid fa-link me-4"></i>
+                                            <p>IHDMA Guidelines for Credentialing, Privileging and Supervision of
+                                                Hyperbaric Oxygen Therapy in the U.S.A.
+                                            </p>
+                                        </a>
+                                    </div>
+
                                 </div>
                             </div>
+                        </div>
 
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-5">
-                                <p class="disc wow fadeInUp mb-0" data-wow-delay=".6s" data-wow-duration=".8s">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat.
-                                </p>
-                                <p class="disc wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".8s">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat.
-                                </p>
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <p class="disc wow fadeInUp mb-0" data-wow-delay=".6s" data-wow-duration=".8s">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat.
-                                </p>
-                                <p class="disc wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".8s">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat.
-                                </p>
-                            </div>
-                            <div class="d-flex services-btn">
-                                <a href="#" class="rts-btn btn-primary">Download IHDMA Journal PDFs
-                                    <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                                </a>
-                                <a href="#" class="rts-btn btn-primary ms-3">Pressure PDFs (2011-Present)
-                                    <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                                </a>
-                                <a href="#" class="rts-btn btn-primary ms-3">IHDMA Journal Ahead Of Print -Public
-                                    <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- publcationsection end -->
+    <!-- publcation section end -->
+
+
+
 
 
     <!--  brand area start -->

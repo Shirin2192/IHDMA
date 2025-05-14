@@ -394,7 +394,7 @@
       });
 
       $(document).ready(function () {
-        var swiper = new Swiper(".mySwiper-banner-2", {
+        var swiper = new Swiper(".banner-swiper", {
           spaceBetween: 0,
           slidesPerView: 1,
           loop: true,
@@ -410,6 +410,8 @@
           },
         });
       });
+
+
       $(document).ready(function () {
         var swiper = new Swiper(".mySwiper-banner-eight", {
           spaceBetween: 0,
@@ -464,7 +466,7 @@
           },
         });
       });
-
+      
       $(document).ready(function () {
         var swiper = new Swiper(".mySwiper-service-dental", {
           spaceBetween: 30,
@@ -569,6 +571,24 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
+                breakpoints: {
+            1500: {
+              slidesPerView: 1,
+            },
+            1199: {
+              slidesPerView: 1,
+            },
+            991: {
+              slidesPerView: 1,
+            },
+            767: {
+              slidesPerView: 1,
+            },
+            575: {
+              slidesPerView: 1,
+            },
+          
+          },
         });
       });
 
@@ -594,7 +614,51 @@
       });
 
 
+      $(document).ready(function () {
+        var swiper = new Swiper(".membershipplan", {
+          spaceBetween: 75,
+          slidesPerView: 3,
+          dots: true,
+          loop: true,
+          speed: 2000,
+          autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+                breakpoints: {
+            1500: {
+              slidesPerView: 3,
+            },
+            1199: {
+              slidesPerView: 3,
+            },
+            991: {
+              slidesPerView: 3,
+            },
+            767: {
+              slidesPerView: 3,
+            },
+            575: {
+              slidesPerView: 1,
+            },
+           
+          },
+        });
+      });
 
+      $(document).ready(function () {
+        $('input[name="DefectiveVision"]').change(function () {
+          if ($('#DefectiveVisionYes1').is(':checked')) {
+            $('#referrerNameField').slideDown();
+          } else {
+            $('#referrerNameField').slideUp();
+          }
+        });
+      });
 
 
 

@@ -38,11 +38,17 @@
     <section class="login-section rts-section-gap2">
         <div class="container">
             <div class="login-box">
-            <h4><?= $type_name ?></h4>
-            <p>Please enter the information below to purchase your <?= $type_name ?>. The price you will need to pay is <?= $symbol ?><?= $price ?>. </p>
+                <h4>
+                    <?= $type_name ?>
+                </h4>
+                <p>Please enter the information below to purchase your
+                    <?= $type_name ?>. The price you will need to pay is
+                    <?= $symbol ?>
+                    <?= $price ?>.
+                </p>
                 <div class="login-content">
                     <h6 class="text-center">Please enter your details</h6>
-                    
+
                 </div>
                 <form id="registerForm" class="mt-5">
                     <div class="account-info mb-5">
@@ -251,7 +257,13 @@
                                         name="DefectiveVision" value="No" checked="">
                                     <label for="DefectiveVisionNo1">No</label>
                                 </div>
+                              
 
+                            </div>
+                            <div class="col-md-12">
+                                  <div class="mt-4" id="referrerNameField" style="display: none;">
+                                    <input type="text" class="form-control" placeholder="Enter referring member's name">
+                                </div>
                             </div>
                             <div class="col-md-12 mt-4">
                                 <div class="infoswitch">
@@ -268,6 +280,7 @@
                                         <input class="form-check-input" type="checkbox" id="checkbox2">
                                         <label class="form-check-label ms-2" for="checkbox2"> No</label>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
