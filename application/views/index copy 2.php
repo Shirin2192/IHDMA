@@ -103,7 +103,7 @@
                         <p class="pre">Welcome</p>
                         <h6 class="title mb-0">
                             Indian Hyperbaric and Diving Medicine Association (IHDMA) is an international non-profit
-                            organization serving members from more than 67 countries. The IHDMA is the primary source of
+                            organization serving members from more than 67 countries. The UHMS is the primary source of
                             scientific information for diving and hyperbaric medicine physiology worldwide.<br>
                         </h6>
                     </div>
@@ -355,52 +355,188 @@
 
             <div class="swiper membershipplan mt--0 g-75">
                 <div class="swiper-wrapper">
-                   <?php foreach($membershiptype as $membershiptype_key => $membershiptype_row){
-                     $price = $membershiptype_row['price'];
-                            if($price != 0){
-                                $prices = $membershiptype_row['symbol'].' ' .$membershiptype_row['price'];
-                            }else{
-                                $prices = 'Free';
-                            }
-                    ?>
+
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="single-pricing-area">
                             <div class="pricing-head">
-                                <h6 class="title"><?= $membershiptype_row['category_name'] ?></h6>
-                                <span class="subheading"><?= $membershiptype_row['type_name'] ?></span>
-                                <h3 class="price"><?= $prices ?></h3>
+                                <h6 class="title">Individual Membership</h6>
+                                <span class="subheading">Lifetime Membership</span>
+                                <h3 class="price">INR 5,000</h3>
                             </div>
                             <div class="body">
                                 <div class="read-block">
                                     <p class="disc mb-0">
-                                        <?= $membershiptype_row['full_description'] ?>
+                                        Regular Members of the Society shall be physicians or doctorate-level health
+                                        care professionals (MD, DO, PhD, DPM, DDS, or equivalent).
                                         <span class="dots"></span>
                                         <span class="more-text">
-                                            <?= $membershiptype_row['full_description'] ?>
+                                            This category will include those Associates waived by the BOD as
+                                            exceptional cases.
                                         </span>
                                     </p>
                                     <span class="read-toggle">Read more</span>
                                 </div>
-                                <?php 
-                                    $price = $membershiptype_row['price'];
-                                    $symbol = $membershiptype_row['symbol'];
-                                    $type_name = $membershiptype_row['type_name'];
-                                    $data = [
-                                        'price' => $price,
-                                        'symbol' => $symbol,
-                                        'type_name' => $type_name,
-                                    ];
-                                    $encodedData = urlencode(base64_encode(json_encode($data)));
-                                    ?>
-                                <a href="<?= base_url() ?>website/register?price=<?= $encodedData ?>" class="rts-btn btn-primary">Join
-                                        Now
-                                        <img src="<?=base_url()?>assets/images/banner/icons/arrow--up-right.svg"
-                                            alt=""></a>
+
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now
+                                    <img src="https://sda.in.net/web/IHDMA/assets/images/banner/icons/arrow--up-right.svg"
+                                        alt=""></a>
                             </div>
                         </div>
                     </div>
-                    <?php } ?>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area active">
+                            <div class="pricing-head">
+                                <h6 class="title title1">Corporate Membership</h6>
+                                <span class="subheading">Silver Corporate Partner
+                                </span>
+                                <h3 class="price price1">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Two (2) individual memberships and Banner displayed
+                                        <span class="dots"></span>
+                                        <span class="more-text"> on the Corporate page.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area">
+                            <div class="pricing-head">
+                                <h6 class="title">Individual Membership</h6>
+                                <span class="subheading">Associate Membership</span>
+                                <h3 class="price">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Hyperbaric technician, registered nurse, physician assistant, nurse
+                                        practitioner, undergraduate student, diving supervisor, certified scuba
+                                        instructor, or other hyperbaric or diving personnel with specialized
+                                        technical
+                                        <span class="dots"></span>
+                                        <span class="more-text">or research backgrounds but who do not possess the
+                                            academic background for Regular Membership can become Associate Members
+                                            of the Society. Regular Members (retired) who are 65 or older and are
+                                            not working can also fall under this category; however they will not
+                                            have voting rights. Associate Members are not entitled to vote or hold
+                                            office for the Regular Membership positions on the Board of Directors,
+                                            but are eligible to vote and hold office for the Associate positions on
+                                            the Board.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area active">
+                            <div class="pricing-head">
+                                <h6 class="title title1">Corporate Membership</h6>
+                                <span class="subheading">Gold Corporate Partner</span>
+                                <h3 class="price price1">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Three (3) individual memberships, emails sent by UHMS on behalf of the
+                                        corporate partner, Banner displayed
+                                        <span class="dots"></span>
+                                        <span class="more-text">on the Corporate page.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area">
+                            <div class="pricing-head">
+                                <h6 class="title">Individual Membership</h6>
+                                <span class="subheading">Student Membership</span>
+                                <h3 class="price">Free
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Must submit a letter from the Registrar confirming full-time enrollment and
+                                        the program the student is currently enrolled in. Must be a full-time
+                                        student enrolled in undergraduate or graduate programs
+                                        <span class="dots"></span>
+                                        <span class="more-text">in a related field of nursing, medicine or science.
+                                            Student members will receive online access to the IHDMA Journal and our
+                                            membership newsletter, Pressure along with all other membership
+                                            benefits. This membership type is non-paying and eligibility must be
+                                            confirmed annually with enrollment information. Student members are not
+                                            eligible to vote or hold office.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Slide6 -->
+                    <div class="swiper-slide">
+                        <div class="single-pricing-area active">
+                            <div class="pricing-head">
+                                <h6 class="title title1">Corporate Membership</h6>
+                                <span class="subheading">Platinum Corporate Partner
+                                </span>
+                                <h3 class="price price1">INR 5,000
+                                </h3>
+                            </div>
+                            <div class="body">
+                                <div class="read-block">
+                                    <p class="disc mb-0">
+                                        Four (4) individual memberships, emails sent by IHDMA on behalf of the
+                                        corporate partner,
+                                        <span class="dots"></span>
+                                        <span class="more-text">Banner displayed on the Corporate and Vendor pages.
+                                        </span>
+                                    </p>
+                                    <span class="read-toggle">Read more</span>
+                                </div>
+
+                                <a href="https://sda.in.net/web/IHDMA/website/register" class="rts-btn btn-primary">Join
+                                    Now <img
+                                        src="https://sda.in.net/web/IHDMA/assets/images/banner/icons/arrow--up-right.svg"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -408,7 +544,7 @@
             </div>
         </div>
         <div class="text-center mt-5">
-            <a href="<?= base_url()?>website/join_ihdma" class="btn-transparent">Show More Membership <i
+            <a href="<?= base_url()?>website/register" class="btn-transparent">Show More Membership <i
                     class="fa-solid fa-arrow-right-long"></i></a>
         </div>
     </div>

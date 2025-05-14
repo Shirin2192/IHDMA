@@ -14,7 +14,18 @@ class Website extends CI_Controller {
 
 	public function index()
 	{
-		$response['team_members'] = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*',false);
+		$this->load->model('Member_model');
+		$data = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*', false);
+		$response['membershiptype'] = $this->Member_model->get_membership_types();
+			// Reorder manually
+			$reordered = [
+				$data[2],
+				$data[3],
+				$data[1],
+				$data[0],
+			];
+
+		$response['team_members'] = $reordered;
 		$this->load->view('index',$response);
 	}
 	public function register(){
@@ -33,9 +44,7 @@ class Website extends CI_Controller {
 	}
 	public function submit_registration()
 	{
-		print_r($_POST);die;
 		$this->load->library('form_validation');
-
 		// Step 1: Form Validation
 		$this->form_validation->set_rules('membershiptype', 'Membership Type', 'required');
 		$this->form_validation->set_rules('username', 'Username', 'required|is_unique[tbl_users.user_name]');
@@ -256,7 +265,6 @@ class Website extends CI_Controller {
 		$response['individual_category'] = $this->model->selectWhereData('tbl_membership_categories', ['is_delete' => '1','id'=>1], '*');
 		$response['corporate_category'] = $this->model->selectWhereData('tbl_membership_categories', ['is_delete' => '1','id'=>2], '*');
 		$response['membershiptype'] = $this->Member_model->get_membership_types();
-		// print_r($response);die;
 		$this->load->view('join-ihdma',$response);
 	}
 	public function contact_us() {
