@@ -33,13 +33,13 @@
                             <h6 class="title">Quick Links </h6>
                             <div class="body">
                                 <ul class="nav-bottom">
-                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="<?= base_url()?>website/about">About Us</a></li>
                                     <li><a href="#">Facility Accreditation</a></li>
                                     <li><a href="#">Memberships </a></li>
                                     <li><a href="#">Education </a></li>
                                     <li><a href="#">Publications </a></li>
                                     <li><a href="#">Resources </a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="<?= base_url()?>website/contact_us">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
