@@ -259,19 +259,42 @@
     <div class="general-section rts-section-gap20 bg-light">
         <div class="container">
             <div class="row g-5">
+                <?php
+                    $url ="http://localhost/idhma_admin/";
+                    foreach($hbot_notify as $hbot_notify_key => $hbot_notify_row){ 
+                    if($hbot_notify_key === 0){
+                        $class= 'rts-btn btn-primary mt-4 warning-btn';
+                        $toggle = 'data-bs-toggle="modal"';
+                        $target = 'data-bs-target="#consumerwaring"';
+                        $targets = '';
+                    }else{
+                        $class= 'rts-btn btn-primary mt-4';
+                        $toggle="";
+                        $target = '';
+                        $targets = '_blank';
+                    }
+                    if($hbot_notify_key === 1){
+                        $href= $hbot_notify_row['video_link'];
+                        $targets = '_blank';
+                    }elseif($hbot_notify_key === 2){
+                        $href= $url.$hbot_notify_row['file_path'];
+                        $targets = '_blank';
+                    }
+                    ?>
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay=".2s"
                     data-wow-duration=".8s">
                     <div class="single-short-service">
                         <h5 class="title mb-0">
-                            Important Information on Soft-Sided Chambers:
+                            <?= $hbot_notify_row['title'] ?>
                         </h5>
-                        <a href="" class="rts-btn btn-primary mt-4 warning-btn" data-bs-toggle="modal"
-                            data-bs-target="#consumerwaring">Consumer Warning
+                        <a href="<?= $href ?>" class="<?= $class?>" <?= $toggle?><?= $target?> target="<?= $targets?>"
+                            ><?= $hbot_notify_row['button'] ?>
                             <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay=".4s"
+                <?php }?>
+                <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay=".4s"
                     data-wow-duration=".8s">
                     <div class="single-short-service">
                         <h5 class="title">Latest News on HBOT : Recent Advances in HBOT
@@ -292,7 +315,7 @@
                             <img src="<?= base_url();?>assets/images/banner/icons/arrow--up-right.svg" alt="">
                         </a>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
