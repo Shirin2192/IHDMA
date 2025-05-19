@@ -27,6 +27,23 @@ class Website extends CI_Controller {
 			];
 
 		$response['team_members'] = $reordered;
+		$this->load->view('indexnew',$response);
+	}
+	public function home()
+	{
+		$this->load->model('Member_model');
+		$data = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*', false);
+		$response['hbot_notify'] = $this->model->selectWhereData('tbl_hbot_notifications', ['is_delete' => '1'], '*',false);
+		$response['membershiptype'] = $this->Member_model->get_membership_types();
+			// Reorder manually
+			$reordered = [
+				$data[2],
+				$data[3],
+				$data[1],
+				$data[0],
+			];
+
+		$response['team_members'] = $reordered;
 		$this->load->view('index',$response);
 	}
 	public function register(){
