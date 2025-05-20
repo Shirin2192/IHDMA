@@ -2,7 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 use Razorpay\Api\Api;
 use Razorpay\Api\Errors\SignatureVerificationError;
-
 class Website extends CI_Controller {
 	public function __construct()
 	{
@@ -27,25 +26,9 @@ class Website extends CI_Controller {
 			];
 
 		$response['team_members'] = $reordered;
-		$this->load->view('indexnew',$response);
-	}
-	public function home()
-	{
-		$this->load->model('Member_model');
-		$data = $this->model->selectWhereData('tbl_team_members', ['is_delete' => '1'], '*', false);
-		$response['hbot_notify'] = $this->model->selectWhereData('tbl_hbot_notifications', ['is_delete' => '1'], '*',false);
-		$response['membershiptype'] = $this->Member_model->get_membership_types();
-			// Reorder manually
-			$reordered = [
-				$data[2],
-				$data[3],
-				$data[1],
-				$data[0],
-			];
-
-		$response['team_members'] = $reordered;
 		$this->load->view('index',$response);
 	}
+	
 	public function register(){
 		$encodedData = $this->input->get('price');
 		$dataArray = json_decode(base64_decode(urldecode($encodedData)), true);
@@ -54,11 +37,24 @@ class Website extends CI_Controller {
 		$symbol = $dataArray['symbol'] ?? '';
 		$type_name = $dataArray['type_name'] ?? '';
 		$data['membership_type'] = $this->model->selectWhereData('tbl_membership_types', ['is_delete' => '1'], ['id','type_name'],false);
+		$data['countries'] = $this->model->selectWhereData('countries',array(),array('id','name'),false);
+		
 		// echo "<pre>";print_r($data['membership_type']);die;
 		$data['price'] = $price;
 		$data['symbol'] = $symbol;
 		$data['type_name'] = $type_name;
 		$this->load->view('register', $data);
+	}
+	public function get_states() {
+		$country_id = $this->input->post('country_id');
+		$data['states'] = $this->model->selectWhereData('states',array('country_id'=>$country_id),array('id','name'),false);
+
+		echo json_encode($data);
+	}
+	public function get_price_from_membershiptype(){
+		$id = $this->input->post('id');
+		$data['price'] = $this->model->selectWhereData('tbl_membership_types',array('id'=>$id),'price');
+		echo json_encode($data);
 	}
 	public function submit_registration()
 	{
@@ -88,27 +84,28 @@ class Website extends CI_Controller {
 		}
 
 		// Step 2: Razorpay Signature Verification
-		// $razorpay_order_id = $this->input->post('razorpay_order_id');
-		// $razorpay_payment_id = $this->input->post('razorpay_payment_id');
-		// $razorpay_signature = $this->input->post('razorpay_signature');
+		$razorpay_order_id = $this->input->post('razorpay_order_id');
+		$razorpay_payment_id = $this->input->post('razorpay_payment_id');
+		$razorpay_signature = $this->input->post('razorpay_signature');
 
-		// if (!$razorpay_order_id || !$razorpay_payment_id || !$razorpay_signature) {
-		// 	echo json_encode(['status' => 'error', 'message' => 'Incomplete payment information.']);
-		// 	return;
-		// }
+		if (!$razorpay_order_id || !$razorpay_payment_id || !$razorpay_signature) {
+			echo json_encode(['status' => 'error', 'message' => 'Incomplete payment information.']);
+			return;
+		}
 
-		// try {
-		// 	$api = new Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET'); // Replace with real keys
-		// 	$attributes = [
-		// 		'razorpay_order_id' => $razorpay_order_id,
-		// 		'razorpay_payment_id' => $razorpay_payment_id,
-		// 		'razorpay_signature' => $razorpay_signature
-		// 	];
-		// 	$api->utility->verifyPaymentSignature($attributes);
-		// } catch (SignatureVerificationError $e) {
-		// 	echo json_encode(['status' => 'error', 'message' => 'Payment verification failed.']);
-		// 	return;
-		// }
+		try {
+			$api = new Api('rzp_test_MrLsck8raPw8WI', 'gVtTxw9ULrUEuMaRYxNV34yZ'); // Replace with real keys
+			$attributes = [
+				'razorpay_order_id' => $razorpay_order_id,
+				'razorpay_payment_id' => $razorpay_payment_id,
+				'razorpay_signature' => $razorpay_signature
+			];
+
+			$api->utility->verifyPaymentSignature($attributes);
+		} catch (SignatureVerificationError $e) {
+			echo json_encode(['status' => 'error', 'message' => 'Payment verification failed.']);
+			return;
+		}
 
 		// Step 3: Save Member Data
 		$password = $this->input->post('password');
@@ -155,35 +152,45 @@ class Website extends CI_Controller {
 
 		$to_email = $email;
 		$subject = "IHDMA Login Details";
-		send_inventory_email($to_email, $subject, $html);
+		send_email($to_email, $subject, $html);
 
-		echo json_encode(['status' => 'success', 'message' => 'Registration successful.']);
+		echo json_encode([
+					'status' => 'success',
+					'message' => 'Registration successful.',
+					'user_data' => $user,
+					'url' => base_url('website') // Redirect URL after login
+				]);
 	}
-	// public function create_order()
-	// {
-	// 	$this->load->helper('security');
-	// 	$amount = $this->input->post('price'); // price in rupees
+	public function create_order()
+{
+    $this->load->helper('security');
+    $amount = $this->input->post('price'); // in rupees
 
-	// 	if (!$amount) {
-	// 		echo json_encode(['status' => 'error', 'message' => 'Invalid amount']);
-	// 		return;
-	// 	}
+    if (!$amount || !is_numeric($amount)) {
+        echo json_encode(['status' => 'error', 'message' => 'Invalid amount']);
+        return;
+    }
 
-	// 	$api = new \Razorpay\Api\Api('YOUR_KEY_ID', 'YOUR_KEY_SECRET');
-	// 	$order = $api->order->create([
-	// 		'receipt'         => 'rcptid_' . time(),
-	// 		'amount'          => $amount * 100, // amount in paise
-	// 		'currency'        => 'INR',
-	// 		'payment_capture' => 1
-	// 	]);
+    try {
+        $api = new Api('rzp_test_MrLsck8raPw8WI', 'gVtTxw9ULrUEuMaRYxNV34yZ');
 
-	// 	echo json_encode([
-	// 		'status' => 'success',
-	// 		'order_id' => $order['id'],
-	// 		'amount' => $order['amount'],
-	// 		'key_id' => 'YOUR_KEY_ID' // Send to JS for Razorpay checkout
-	// 	]);
-	// }
+        $order = $api->order->create([
+            'receipt'         => 'rcptid_' . time(),
+            'amount'          => $amount * 100, // convert to paise
+            'currency'        => 'INR',
+            'payment_capture' => 1
+        ]);
+
+        echo json_encode([
+            'status'   => 'success',
+            'order_id'=> $order['id'],
+            'amount'   => $order['amount'],
+            'key_id'   => 'rzp_test_MrLsck8raPw8WI'
+        ]);
+    } catch (\Exception $e) {
+        echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+    }
+}
 
 
 	public function login_user()

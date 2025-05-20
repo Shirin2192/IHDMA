@@ -169,7 +169,7 @@
                         <input type="checkbox" id="remember">
                         <span>Remember me</span>
                     </label>
-                    <a href="#" class="forgot-link" data-form="forgotForm">Forgot Password?</a>
+                    <!-- <a href="#" class="forgot-link" data-form="forgotForm">Forgot Password?</a> -->
                 </div>
                 <p class="login-link">Don't have an account? <a href="<?= base_url()?>website/join_ihdma"
                         class="switch-form">Sign Up</a>

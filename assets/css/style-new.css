@@ -19178,6 +19178,7 @@ header .rts-btn {
   padding: 15px;
   border: 1px solid #ebebeb;
   background: #fff;
+  min-height: 481px;
 }
 
 .single-team-area-start.with-border .thumbnail {
@@ -22592,10 +22593,9 @@ li.has-dropdown:hover .submenu {
 }
 
 .single-contact-information-card {
-  background: #F9F8FF;
-  border: 1px solid #DDD8F9;
-  padding: 55px;
-  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  padding: 30px;
   text-align: center;
 }
 
@@ -22605,7 +22605,7 @@ li.has-dropdown:hover .submenu {
 
 .single-contact-information-card a {
   display: block;
-  color: #110C2D;
+  color: var(--color-body);
 }
 
 .procedure-single-content-wrapper h2.title {

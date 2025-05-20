@@ -120,28 +120,28 @@
                             <div class="feature-news wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
                                 <div class="row">
                                     <div class="col-md-12 mb-2">
-                                        <a href="#" class="news-title d-flex align-items-center border-bottom">
+                                        <a href="javascript:void(0);" class="news-title d-flex align-items-center border-bottom">
                                             <img src="assets/images/icon/news.png" class="me-3">
                                             <p> Volume 50: the UHM journal celebrates a milestone with the
                                                 publication of this issue</p>
                                         </a>
                                     </div>
                                     <div class="col-md-12 mb-2">
-                                        <a href="#" class="news-title d-flex align-items-center border-bottom">
+                                        <a href="javascript:void(0);" class="news-title d-flex align-items-center border-bottom">
                                             <img src="assets/images/icon/news.png" class="me-3">
                                             <p>FDA recommends UHMS-accredited hyperbaric
                                                 facilities for treatment of specific illnesses</p>
                                         </a>
                                     </div>
                                     <div class="col-md-12 mb-2">
-                                        <a href="#" class="news-title d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="news-title d-flex align-items-center">
                                             <img src="assets/images/icon/news.png" class="me-3">
                                             <p>AMA: Changes in Medicare Physician Spending During the COVID-19 Pandemic
                                             </p>
                                         </a>
                                     </div>
                                     <!-- <div class="col-md-12 mb-2">
-                                        <a href="#" class="news-title d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="news-title d-flex align-items-center">
                                             <img src="assets/images/icon/news.png" class="me-3">
                                             <p>Emergent HBO2 Access Issue
                                             </p>
@@ -224,7 +224,7 @@
                     <div class="about-image-left-wrapper">
                         <div class="thumbnail-main move-right wow"
                             style="visibility: visible; animation-name: moveright;">
-                            <img src="https://sda.in.net/web/IHDMA/assets/images/about/01.jpg" alt="about">
+                            <img src="assets/images/about/about.webp" alt="about">
                         </div>
                         <div class="review-area">
                             <div class="stars-area">
@@ -315,10 +315,10 @@
                                 staff and training to ensure that the utmost quality is maintained within our specialty.
                             </p>
                             <div class="service-btn d-flex flex-column">
-                                <a href="#" class="btn-transparent mb-3">Facility Acc. Program
+                                <a href="javascript:void(0);" class="btn-transparent mb-3">Facility Acc. Program
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
-                                <a href="#" class="btn-transparent">Map of Acc. Facilities
+                                <a href="javascript:void(0);" class="btn-transparent">Map of Acc. Facilities
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
                             </div>
@@ -330,22 +330,22 @@
                         <h4 class="wow fadeInUp mb-3" data-wow-delay=".2s" data-wow-duration=".8s">Publications</h4>
                         <div class="row services-btn">
                             <div class="col-md-12 mb-4">
-                                <a href="#" class="btn-transparent"> About the IHDMA Journal
+                                <a href="javascript:void(0);" class="btn-transparent"> About the IHDMA Journal
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
                             </div>
                             <div class="col-md-12 mb-4">
-                                <a href="#" class="btn-transparent">Download IHDMA Journal PDFs
+                                <a href="javascript:void(0);" class="btn-transparent">Download IHDMA Journal PDFs
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
                             </div>
                             <div class="col-md-12 mb-4">
-                                <a href="#" class="btn-transparent">Pressure PDFs (2011-Present)
+                                <a href="javascript:void(0);" class="btn-transparent">Pressure PDFs (2011-Present)
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
                             </div>
                             <div class="col-md-12">
-                                <a href="#" class="btn-transparent">IHDMA Journal Ahead Of
+                                <a href="javascript:void(0);" class="btn-transparent">IHDMA Journal Ahead Of
                                     Print-Public
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -357,14 +357,14 @@
                             Links</h4>
                         <div class="row">
                             <div class="col-md-12 mb-4">
-                                <a href="#" class="news-title d-flex align-items-center">
+                                <a href="javascript:void(0);" class="news-title d-flex align-items-center">
                                     <i class="fa-solid fa-link me-4"></i>
                                     <p> NEW - Clinical Hyperbaric Facility Accreditation Manual Fourth Edition
                                     </p>
                                 </a>
                             </div>
                             <div class="col-md-12 mb-4">
-                                <a href="#" class="news-title d-flex align-items-center">
+                                <a href="javascript:void(0);" class="news-title d-flex align-items-center">
                                     <i class="fa-solid fa-link me-4"></i>
                                     <p>Find the latest information on regulatory, public policy and legislative
                                         issues affecting our industry
@@ -372,7 +372,7 @@
                                 </a>
                             </div>
                             <!-- <div class="col-md-12 mb-4">
-                                <a href="#" class="news-title d-flex align-items-center">
+                                <a href="javascript:void(0);" class="news-title d-flex align-items-center">
                                     <i class="fa-solid fa-link me-4"></i>
                                     <p>IHDMA Guidelines for Credentialing, Privileging and Supervision of
                                         Hyperbaric Oxygen Therapy in the U.S.A.
@@ -395,7 +395,7 @@
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay=".2s"
                     data-wow-duration=".8s">
-                    <div class="single-short-service border-end">
+                    <div class="single-short-service">
                         <h4 class="title wow fadeInUp">
                             Important Information on Soft-Sided Chambers:
                         </h4>
@@ -408,7 +408,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay=".4s"
                     data-wow-duration=".8s">
-                    <div class="single-short-service border-end">
+                    <div class="single-short-service">
                         <h4 class="title wow fadeInUp">Latest News on HBOT : Recent Advances in HBOT
                         </h4>
                         <a href="https://www.youtube.com/watch?v=1csTFeGO9ok" class="btn-transparent mt-4"
@@ -436,7 +436,7 @@
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header border-0">
                     <h5 class="modal-title" id="consumerwaringLabel">Consumer Warning</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -553,14 +553,17 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Accordion Item #1
+                                        Why should I be a member of the IHDMA?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-                                        consectetur adipiscing elit quisque faucibus.
+                                        The IHDMA is a global scientific society advancing undersea and hyperbaric
+                                        medicine through advocacy, research, and innovation. It supports members with
+                                        cutting-edge certification programs, accreditation platforms, and industry
+                                        representation.
+
                                     </div>
                                 </div>
                             </div>
@@ -568,14 +571,17 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
+                                        Why should I be a member of the IHDMA?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-                                        consectetur adipiscing elit quisque faucibus.
+                                        The IHDMA is a global scientific society advancing undersea and hyperbaric
+                                        medicine through advocacy, research, and innovation. It supports members with
+                                        cutting-edge certification programs, accreditation platforms, and industry
+                                        representation.
+
                                     </div>
                                 </div>
                             </div>
@@ -584,33 +590,21 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Accordion Item #3
+                                        Why should I be a member of the IHDMA?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-                                        consectetur adipiscing elit quisque faucibus.
+                                        The IHDMA is a global scientific society advancing undersea and hyperbaric
+                                        medicine through advocacy, research, and innovation. It supports members with
+                                        cutting-edge certification programs, accreditation platforms, and industry
+                                        representation.
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-                                        consectetur adipiscing elit quisque faucibus.
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                     <!-- <div class=" mt-5">
@@ -655,10 +649,9 @@
                         <img src="<?= base_url();?>assets/images/team/sample.png" alt="team">
                         <div class="bottom">
                             <h6 class="title">Dr. Narayanamurthy</h6>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-                                consectetur adipiscing amet.</p>
+                            <p class="mb-0">Lorem ipsum dolor sit amet </p>
                             <div class="social-area-tranaparent">
-                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="javascript:void(0);"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -674,7 +667,8 @@
                                 Hyperbaric Oxygen
                                 Therapy Centre</p>
                             <div class="social-area-tranaparent">
-                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-manoj-gupta-3295056a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+                                    target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -685,10 +679,9 @@
                         <img src="<?= base_url();?>assets/images/team/dhiraj.png" alt="team">
                         <div class="bottom">
                             <h6 class="title">Dr. Dhiraj Saxena</h6>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-                                consectetur adipiscing amet.</p>
+                            <p class="mb-0">Consultant Physician</p>
                             <div class="social-area-tranaparent">
-                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="javascript:void(0);"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -699,10 +692,9 @@
                         <img src="<?= base_url();?>assets/images/team/himanshu.png" alt="team">
                         <div class="bottom">
                             <h6 class="title">Dr. Himanshu Agarwal</h6>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-                                consectetur adipiscing amet.</p>
+                            <p class="mb-0">MBBS, MD</p>
                             <div class="social-area-tranaparent">
-                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="javascript:void(0);"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -826,26 +818,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="importantlink-wrapper col-lg-12 wow fadeInUp" data-wow-delay=".2s"
+                    <div class="upcomingcourses-wrapper col-lg-12 wow fadeInUp" data-wow-delay=".2s"
                         data-wow-duration=".8s">
                         <h4 class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Upcoming Courses</h4>
                         <div class="row">
+
                             <div class="col-md-12 mb-4">
-                                <a href="#" class="news-title d-flex align-items-center">
-                                    <i class="fa-solid fa-file me-4"></i>
-                                    <p> Mayo Clinic: Diving and Hyperbaric Medicine 2025
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <a href="#" class="news-title d-flex align-items-center">
+                                <a href="javascript:void(0);" class="news-title d-flex align-items-center">
                                     <i class="fa-solid fa-file me-4"></i>
                                     <p>DAN-UHMS Diving and Hyperbaric Medicine Course - Core Concepts – Week 1
                                     </p>
                                 </a>
                             </div>
                             <div class="col-md-12 mb-4">
-                                <a href="#" class="news-title d-flex align-items-center">
+                                <a href="javascript:void(0);" class="news-title d-flex align-items-center">
                                     <i class="fa-solid fa-file me-4"></i>
                                     <p>DAN-UHMS Diving and Hyperbaric Medicine Course - Core Concepts – Week 2
                                     </p>
@@ -863,7 +849,8 @@
                             In 2020, the international Diver Medical Screen Committee (DMSC) released a new
                             diver medical screening system and guidance to the physician.
                         </p>
-                        <a href="#" class="btn-transparent">PHYSIOLOGIC AND BIOCHEMICAL RATIONALE FOR
+                        <a href="https://drive.google.com/file/d/16WZQvNW3DKWPJ6M_yGoXLLSxM-MZhoQS/view" target="_blank"
+                            class="btn-transparent">PHYSIOLOGIC AND BIOCHEMICAL RATIONALE FOR
                             TREATING COVID-19 PATIENTS WITH HYPERBARIC OXYGEN
                             <i class="fa-solid fa-arrow-right-long"></i> </a>
                         </a>
@@ -877,7 +864,7 @@
                                 <div class="swiper-slide">
                                     <div class="latestevent">
                                         <div class="inner-content">
-                                            <a href="#">
+                                            <a href="javascript:void(0);">
                                                 <h5 class="title">DAN UHMS Diving & Hyperbaric Medicine CME</h5>
                                                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit.
                                                     Dolor sit amet consectetur adipiscing.</p>
@@ -886,7 +873,7 @@
                                                 <div class="author-area">
                                                     <p>May 17–24, 2025</p>
                                                 </div>
-                                                <a href="#" class="btn-transparent ms-auto">Learn More
+                                                <a href="javascript:void(0);" class="btn-transparent ms-auto">Learn More
                                                     <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
@@ -896,7 +883,7 @@
                                 <div class="swiper-slide">
                                     <div class="latestevent">
                                         <div class="inner-content">
-                                            <a href="#">
+                                            <a href="javascript:void(0);">
                                                 <h5 class="title">DAN UHMS Diving & Hyperbaric Medicine CME</h5>
                                                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit.
                                                     Dolor sit amet consectetur adipiscing.</p>
@@ -906,7 +893,7 @@
                                                 <div class="author-area">
                                                     <p>May 17–24, 2025</p>
                                                 </div>
-                                                <a href="#" class="btn-transparent ms-auto">Learn More
+                                                <a href="javascript:void(0);" class="btn-transparent ms-auto">Learn More
                                                     <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
@@ -916,7 +903,7 @@
                                 <div class="swiper-slide">
                                     <div class="latestevent">
                                         <div class="inner-content">
-                                            <a href="#">
+                                            <a href="javascript:void(0);">
                                                 <h5 class="title">DAN UHMS Diving & Hyperbaric Medicine CME</h5>
                                                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit.
                                                     Dolor sit amet consectetur adipiscing.</p>
@@ -926,7 +913,7 @@
                                                 <div class="author-area">
                                                     <p>May 17–24, 2025</p>
                                                 </div>
-                                                <a href="#" class="btn-transparent ms-auto">Learn More
+                                                <a href="javascript:void(0);" class="btn-transparent ms-auto">Learn More
                                                     <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
@@ -936,7 +923,7 @@
                                 <div class="swiper-slide">
                                     <div class="latestevent">
                                         <div class="inner-content">
-                                            <a href="#">
+                                            <a href="javascript:void(0);">
                                                 <h5 class="title">DAN UHMS Diving & Hyperbaric Medicine CME</h5>
                                                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit.
                                                     Dolor sit amet consectetur adipiscing.</p>
@@ -945,7 +932,7 @@
                                                 <div class="author-area">
                                                     <p>May 17–24, 2025</p>
                                                 </div>
-                                                <a href="#" class="btn-transparent ms-auto">Learn More
+                                                <a href="javascript:void(0);" class="btn-transparent ms-auto">Learn More
                                                     <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
@@ -962,7 +949,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
 
@@ -994,32 +981,32 @@
     <?php include('common/js_files.php');?>
     <script src="<?= base_url();?>assets/view_js/login.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const modal = document.getElementById('teamMemberModal1');
-            modal.addEventListener('show.bs.modal', function (event) {
-                const button = event.relatedTarget;
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('teamMemberModal1');
+        modal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
 
-                // Get data attributes from clicked team card
-                const name = button.getAttribute('data-name');
-                const designation = button.getAttribute('data-designation');
-                const description = button.getAttribute('data-description');
-                const photo = button.getAttribute('data-photo');
-                const linkedin = button.getAttribute('data-linkedin');
-                const facebook = button.getAttribute('data-facebook');
-                const twitter = button.getAttribute('data-twitter');
-                const youtube = button.getAttribute('data-youtube');
+            // Get data attributes from clicked team card
+            const name = button.getAttribute('data-name');
+            const designation = button.getAttribute('data-designation');
+            const description = button.getAttribute('data-description');
+            const photo = button.getAttribute('data-photo');
+            const linkedin = button.getAttribute('data-linkedin');
+            const facebook = button.getAttribute('data-facebook');
+            const twitter = button.getAttribute('data-twitter');
+            const youtube = button.getAttribute('data-youtube');
 
-                // Set modal content
-                modal.querySelector('.member_name').textContent = name;
-                modal.querySelector('#member_description').innerHTML = description;
+            // Set modal content
+            modal.querySelector('.member_name').textContent = name;
+            modal.querySelector('#member_description').innerHTML = description;
 
 
-                // Optionally add more:
-                // modal.querySelector('.modal-body').innerHTML += `<img src="${photo}" class="img-fluid mb-2"/>`;
+            // Optionally add more:
+            // modal.querySelector('.modal-body').innerHTML += `<img src="${photo}" class="img-fluid mb-2"/>`;
 
-                // You can also update social icons dynamically here if needed
-            });
+            // You can also update social icons dynamically here if needed
         });
+    });
     </script>
 </body>
 

@@ -1,9 +1,9 @@
-
 @media (min-width: 1023px) and (max-width: 1367px) {
-  .container{
-    max-width: 1280px;
-  }
+    .container {
+        max-width: 1280px;
+    }
 }
+
 .border-bottom {
     padding: 0px 0 10px 0 !important;
 }
@@ -110,7 +110,8 @@
 }
 
 .breadcrumb-area h5 {
-    color: var(--color-primary);
+    color: var(--color-body);
+    font-size: 16px;
 }
 
 .modal {
@@ -210,8 +211,8 @@
 
 .banner-swiper .swiper-button-next:hover,
 .banner-swiper .swiper-button-prev:hover {
-    background: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    background: #399916;
+    border: 1px solid #399916;
 }
 
 .banner-swiper .swiper-button-next:hover i,
@@ -223,6 +224,7 @@
     left: 85%;
     top: 92%;
 }
+
 
 .banner-swiper .swiper-button-next {
     right: 20px;
@@ -287,11 +289,13 @@
     position: relative;
     /* margin-right: -30px; */
 }
-.about-content-wrapper-right h2{
+
+.about-content-wrapper-right h2 {
     font-size: 22px;
     color: var(--color-primary);
 }
-.about-content-wrapper-right{
+
+.about-content-wrapper-right {
     padding: 0 25px;
 }
 
@@ -409,6 +413,8 @@
 
 .general-section .single-short-service {
     padding: 30px 20px;
+    border: 1px solid #ebebeb;
+    background: #fff;
     /* border: 1px solid #ebebeb; */
 }
 
@@ -416,7 +422,7 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 600;
-    color: #242424;
+    color: var(--color-body);
 }
 
 
@@ -424,6 +430,12 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: none;
     padding: 20px;
+}
+
+.consumerwaring .modal-content h5 {
+    color: var(--color-primary);
+    font-size: 22px;
+
 }
 
 .membership-section h4 {
@@ -445,16 +457,23 @@
 .membership-section .single-pricing-area:hover {
     border: 1px solid #F49124;
 }
+
+.teammember .modal-body li {
+    font-size: 16px;
+}
+
 .info .modal-content {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: none;
     padding: 15px;
 }
-.info .modal-title{
-      color: var(--color-primary);
+
+.info .modal-title {
+    color: var(--color-primary);
     font-size: 18px;
-} 
-.fa-circle-info{
+}
+
+.fa-circle-info {
     color: #399916;
 }
 
@@ -503,22 +522,24 @@
 }
 
 .accordion-body {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-body);
 }
 
 
 
 .latestevent {
-    background: #fff;
-    border: 1px solid #ebebeb;
+   background: #fcf8e8;
+    border: 1px solid #f49124;
     padding: 15px;
 }
 
 .latestevent .inner-content .title {
     font-size: 16px;
     transition: 0.3s;
-    color: var(--color-primary);
+    color: var(--color-body);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
 }
 
 .author-area p {
@@ -554,9 +575,8 @@
 
 
 .latestevents {
-    /* border: 1px solid #ebebeb; */
+    border: 1px solid #ebebeb;
     padding: 15px;
-
 }
 
 /* .latestevent{
@@ -568,21 +588,43 @@
     font-size: 22px;
 }
 
+.upcomingcourses-wrapper {
+    border: 1px solid #F49124;
+    padding: 15px;
+    background: #FCF8E8;
+    height: 100%;
+}
+
+.upcomingcourses-wrapper h4 {
+    color: var(--color-primary);
+    font-size: 22px;
+}
+
 
 /* Aboutus page */
+.aboutus-details h4 {
+    color: var(--color-primary);
+    font-size: 22px;
+}
+
+.objective-section h4 {
+    color: var(--color-primary);
+    font-size: 22px;
+}
 
 .objective-section .objective-area {
-    padding: 20px 25px;
-    border-radius: 15px;
-    border: 1px solid #ebebeb;
-    height: 100%;
-    transition: 0.3s;
-    background: #fff;
+    border: 1px solid #F49124;
+    padding: 15px;
+    background: #FCF8E8;
 }
 
-.objective-section .objective-area:hover {
-    border: 1px solid var(--color-primary);
+.objective-section .objective-area li {
+    font-size: 16px;
 }
+
+/* .objective-section .objective-area:hover {
+    border: 1px solid var(--color-primary);
+} */
 
 .team-section h4 {
     color: var(--color-primary);
@@ -627,38 +669,45 @@
 
 
 /* Benefits of Membership page */
-
-.benefits-section .benefits-area {
-    padding: 20px 25px;
-    border-radius: 15px;
-    border: 1px solid #ebebeb;
-    height: 100%;
-    transition: 0.3s;
-    background: #fff;
+.benefits-section h4 {
+    color: var(--color-primary);
+    font-size: 22px;
 }
 
-.benefits-section .benefits-area:hover {
-    border: 1px solid var(--color-primary);
+.benefits-section .benefits-area {
+    border: 1px solid #F49124;
+    padding: 15px;
+    background: #FCF8E8;
+}
+
+.benefits-section .benefits-area li {
+    font-size: 16px;
+}
+
+.activities-section h4 {
+    color: var(--color-primary);
+    font-size: 22px;
 }
 
 .activities-section .activities-area {
-    padding: 20px 25px;
-    border-radius: 15px;
+    padding: 15px;
     border: 1px solid #ebebeb;
-    height: 100%;
-    transition: 0.3s;
     background: #fff;
 }
 
-.activities-section .activities-area:hover {
-    border: 1px solid var(--color-primary);
+.activities-section .activities-area li {
+    font-size: 16px;
+}
+
+.benefits-section .single-card .single-card-details h4 {
+    color: var(--color-body);
+    font-size: 22px;
 }
 
 
 .benefits-section .single-card .single-card-details .top {
     padding: 30px;
-    background: var(--color-primary);
-    border-radius: 10px;
+    background: #FCF8E8;
 }
 
 .benefits-section .single-card .single-card-details .top h5 {
@@ -681,9 +730,17 @@
 /* Join IHDMA page */
 
 /* individual-membership */
+.individual-membership-details h2 {
+    color: var(--color-primary);
+    font-size: 22px;
+}
+
+.individual-membership-details h4 {
+    color: var(--color-body);
+    font-size: 18px;
+}
 
 .individual-membership-details .single-pricing-area {
-    border-radius: 15px;
     padding: 40px 40px;
     background: #94d29952;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -692,7 +749,8 @@
 
 
 .individual-membership-details .single-pricing-area .title {
-    font-size: 20px;
+    font-size: 22px;
+    color: var(--color-body);
 }
 
 .individual-membership-details .single-pricing-area .pricing-head {
@@ -717,16 +775,24 @@
 }
 
 .corporate-membership-details .single-pricing-area {
-    border-radius: 15px;
     padding: 40px 40px;
     background: #94d29952;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     min-height: 385px !important;
 }
 
+.corporate-membership-section h2 {
+    color: var(--color-primary);
+    font-size: 22px;
+}
+
+.corporate-membership-details h4 {
+    color: var(--color-body);
+    font-size: 18px;
+}
 
 .corporate-membership-details .single-pricing-area .title {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .corporate-membership-details .single-pricing-area .pricing-head {
@@ -750,6 +816,11 @@
     margin-top: 30px;
 }
 
+.join-ihdma-section .join-ihdma h2 {
+    color: var(--color-primary);
+    font-size: 22px;
+}
+
 
 .login-section .form-control {
     width: 100%;
@@ -767,13 +838,17 @@
 
 .login-section .login-box {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     border: 1px solid #ebebeb;
     padding: 25px;
 }
 
 .login-section .required {
     color: red;
+}
+.submit_button .btn-transparent{
+    text-align: left;
+    border: none;
 }
 
 .infoswitch {

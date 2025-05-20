@@ -5,14 +5,14 @@
                 <div class="col-lg-12">
                     <!-- subscribe area start -->
                     <div class="subscribe-area-start pb--30">
-                        <a href="#" class="logo">
+                        <a href="javascript:void(0);" class="logo">
                             <img src="<?= base_url()?>assets/images/logo/logo.png" class="w-25" alt="logo">
                         </a>
                         <!-- subscribe area start -->
-                        <div class="subscribe-area">
+                        <!-- <div class="subscribe-area">
                             <input type="text" placeholder="Enter your email">
                             <button class="rts-btn btn-primary">Subscribe</button>
-                        </div>
+                        </div> -->
                         <!-- subscribe area end -->
                     </div>
                     <!-- subscribe area end -->
@@ -26,7 +26,7 @@
                                     Mumbai, India
                                 </p>
                                 <a href="mailto:info@ihdma.com">info@ihdma.com</a>
-                                <a href="tel:+919930729923">+919930729923</a>
+                                <!-- <a href="tel:+919930729923">+919930729923</a> -->
                             </div>
                         </div>
                         <div class="single-wized col-md-3">
@@ -34,11 +34,12 @@
                             <div class="body">
                                 <ul class="nav-bottom">
                                     <li><a href="<?= base_url()?>website/about">About Us</a></li>
-                                    <li><a href="#">Facility Accreditation</a></li>
-                                    <li><a href="#">Memberships </a></li>
-                                    <li><a href="#">Education </a></li>
-                                    <li><a href="#">Publications </a></li>
-                                    <li><a href="#">Resources </a></li>
+                                    <li><a href="<?= base_url()?>website/facility_acc">Facility Accreditation</a></li>
+                                    <li><a href="<?= base_url()?>website/join_ihdma">Memberships </a></li>
+                                    <li><a href="javascript:void(0);">Education </a></li>
+                                    <li><a href="javascript:void(0);">Publications </a></li>
+                                    <li><a href="javascript:void(0);">Resources </a></li>
+                                    <li><a href="javascript:void(0);">FAQs </a></li>
                                     <li><a href="<?= base_url()?>website/contact_us">Contact</a></li>
                                 </ul>
                             </div>
@@ -47,10 +48,10 @@
                             <h6 class="title">Legal Policy</h6>
                             <div class="body">
                                 <ul class="nav-bottom">
-                                    <li><a href="#">Cancellation & Refund Policy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Shipping and Delivery Policy </a></li>
-                                    <li><a href="#">Membership Category</a></li>
+                                    <li><a href="javascript:void(0);">Cancellation & Refund Policy</a></li>
+                                    <li><a href="javascript:void(0);">Terms & Conditions</a></li>
+                                    <li><a href="javascript:void(0);">Shipping and Delivery Policy </a></li>
+                                    <li><a href="javascript:void(0);">Membership Category</a></li>
                                 </ul>
                             </div>
                         </div>

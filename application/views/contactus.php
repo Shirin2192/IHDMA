@@ -7,12 +7,25 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url()?>assets/images/logo/favicon.png">
     <title>Indian Hyperbaric and Diving Medicine Association</title>
     <meta name="description" content="">
-    <?php include ('common/css_files.php'); ?>
+    
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/plugins/plugins.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/plugins/magnifying-popup.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.19/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"
+        integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/style-new.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/custom-new.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-sV0xS8zO8W4UEgAmR4vD+M0AD+N7EAbDcyDKdROq5rV0Ujqz+U+2KqzK5MReo0gqErDPk0CQkXnxI7yD2c49cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <!-- Header Start -->
-    <?php include ('common/header.php'); ?>
+    <?php include ('common/headernew.php'); ?>
     <!-- Header End -->
 
 
@@ -49,11 +62,9 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="single-contact-information-card">
                         <div class="icon">
-                            <img src="<?= base_url()?>assets/images/contact/02.png" alt="icons">
+                            <img src="<?= base_url()?>assets/images/contact/04.png" alt="icons">
                         </div>
-                        <a href="tel:+91 99307 29923">
-                            +91 99307 29923
-                        </a>
+                       <a href="mailto:info@ihdma.com">info@ihdma.com</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -82,10 +93,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="gogle-map-wrapper">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8661.892214277279!2d90.39956824489762!3d23.778885832677066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77094eace8b%3A0x1cd8c2d9239b6cb7!2sMohakhali%2C%20Dhaka%201212!5e1!3m2!1sen!2sbd!4v1727956036139!5m2!1sen!2sbd"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15083.708544430945!2d72.87143155206306!3d19.06694096500408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1747655683526!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -150,7 +158,7 @@
                                 <div class="form-group">
                                     <label for="stateSelect" class="form-label">State<span
                                             class="required">*</span></label>
-                                    <select class="form-control" id="stateSelect" name="state" required>
+                                    <select class="form-control" id="stateSelect" name="state">
                                         <option value="" disabled selected>Choose a state</option>
                                         <option value="AP">Andhra Pradesh</option>
                                         <option value="AR">Arunachal Pradesh</option>
@@ -197,7 +205,7 @@
                                 <div class="form-group">
                                     <label for="countrySelect" class="form-label">Country<span
                                             class="required">*</span></label>
-                                    <select class="form-control" id="countrySelect" name="country" required>
+                                    <select class="form-control" id="countrySelect" name="country">
                                         <option value="" disabled selected>Choose a country</option>
                                         <option value="AF">Afghanistan</option>
                                         <option value="AL">Albania</option>
@@ -270,7 +278,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group">
+                                <div class="form-group mb-0">
                                     <label for="w3review">Message</label>
                                     <textarea id="w3review" name="w3review" rows="4" cols="50"
                                         class="form-control"></textarea>
@@ -281,18 +289,14 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="rts-btn btn-primary" id="submit_form_btn">
-                        Submit <img src="<?= base_url() ?>assets/images/banner/icons/arrow--up-right.svg" alt="">
-                    </button>
+                    <div class="submit_button"><button type="submit" class="btn-transparent" id="submit_form_btn">
+                        Submit <i class="fa-solid fa-arrow-right-long"></i>
+                    </button></div>
                 </form>
 
             </div>
         </div>
     </section>
-
-
-
-
 
     <!-- footer Start -->
     <?php include ('common/footer.php'); ?>

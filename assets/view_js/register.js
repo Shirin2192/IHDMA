@@ -80,4 +80,49 @@ $(document).ready(function () {
     });
 });
 
+$('#country').change(function () {
+  var countryId = $(this).val();
 
+  if (countryId !== '') {
+    $.ajax({
+      url: frontend + "website/get_states", // Make sure `frontend` is defined somewhere
+      type: 'POST',
+      data: { country_id: countryId },
+      dataType: 'json',
+      success: function (response) {
+        var html ='';
+        $('#state').empty().append('<option value="">Select State</option>');
+       
+          $.each(response.states, function (index, state) {
+            console.log(state.id);
+           html += '<option value="' + state.id + '">' + state.name + '</option>';
+          });
+
+          $('#state').html(html);
+          $(".chosen-select").chosen({ width: "100%" }).trigger("chosen:updated");
+      },
+      error: function () {
+        $('#state').html('<option value="">Select State</option>');
+        console.error("Failed to fetch states");
+      }
+    });
+  } else {
+    $('#state').html('<option value="">Select State</option>');
+  }
+});
+
+$('#membershiptype').change(function(){
+    var id = $(this).val();
+
+  if (id !== '') {
+        $.ajax({
+        url: frontend + "website/get_price_from_membershiptype", // Make sure `frontend` is defined somewhere
+        type: 'POST',
+        data: { id: id },
+        dataType: 'json',
+        success: function (response) {
+                $('#price').val(response['price'].price)
+        }
+        });
+    }
+});

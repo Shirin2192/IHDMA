@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.rts-btn').click(function(e) {
+    $('#contact_form').click(function(e) {
         e.preventDefault();
 
         // Clear previous errors
