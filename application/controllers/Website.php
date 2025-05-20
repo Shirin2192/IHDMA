@@ -92,7 +92,6 @@ class Website extends CI_Controller {
 			echo json_encode(['status' => 'error', 'message' => 'Incomplete payment information.']);
 			return;
 		}
-
 		try {
 			$api = new Api('rzp_test_MrLsck8raPw8WI', 'gVtTxw9ULrUEuMaRYxNV34yZ'); // Replace with real keys
 			$attributes = [
@@ -106,11 +105,9 @@ class Website extends CI_Controller {
 			echo json_encode(['status' => 'error', 'message' => 'Payment verification failed.']);
 			return;
 		}
-
 		// Step 3: Save Member Data
 		$password = $this->input->post('password');
 		$hashpassword = decy_ency('encrypt', $password); // Use your own encryption function
-
 		$member_data = [
 			'membership_type'       => $this->input->post('membershiptype'),
 			'user_name'             => $this->input->post('username'),
@@ -127,9 +124,7 @@ class Website extends CI_Controller {
 			'referred_by_member'    => $this->input->post('referred_by_member') ? 'Yes' : 'No',
 			'contribute_registry'   => $this->input->post('contribute_registry') ? 'Yes' : 'No',
 		];
-
 		$member_id = $this->model->insertData('tbl_users', $member_data);
-
 		// Step 4: Save Payment Data
 		$payment_data = [
 			'fk_user_id'        => $member_id,
@@ -162,35 +157,35 @@ class Website extends CI_Controller {
 				]);
 	}
 	public function create_order()
-{
-    $this->load->helper('security');
-    $amount = $this->input->post('price'); // in rupees
+	{
+		$this->load->helper('security');
+		$amount = $this->input->post('price'); // in rupees
 
-    if (!$amount || !is_numeric($amount)) {
-        echo json_encode(['status' => 'error', 'message' => 'Invalid amount']);
-        return;
-    }
+		if (!$amount || !is_numeric($amount)) {
+			echo json_encode(['status' => 'error', 'message' => 'Invalid amount']);
+			return;
+		}
 
-    try {
-        $api = new Api('rzp_test_MrLsck8raPw8WI', 'gVtTxw9ULrUEuMaRYxNV34yZ');
+		try {
+			$api = new Api('rzp_test_MrLsck8raPw8WI', 'gVtTxw9ULrUEuMaRYxNV34yZ');
 
-        $order = $api->order->create([
-            'receipt'         => 'rcptid_' . time(),
-            'amount'          => $amount * 100, // convert to paise
-            'currency'        => 'INR',
-            'payment_capture' => 1
-        ]);
+			$order = $api->order->create([
+				'receipt'         => 'rcptid_' . time(),
+				'amount'          => $amount * 100, // convert to paise
+				'currency'        => 'INR',
+				'payment_capture' => 1
+			]);
 
-        echo json_encode([
-            'status'   => 'success',
-            'order_id'=> $order['id'],
-            'amount'   => $order['amount'],
-            'key_id'   => 'rzp_test_MrLsck8raPw8WI'
-        ]);
-    } catch (\Exception $e) {
-        echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
-    }
-}
+			echo json_encode([
+				'status'   => 'success',
+				'order_id'=> $order['id'],
+				'amount'   => $order['amount'],
+				'key_id'   => 'rzp_test_MrLsck8raPw8WI'
+			]);
+		} catch (\Exception $e) {
+			echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+		}
+	}
 
 
 	public function login_user()
@@ -293,7 +288,8 @@ class Website extends CI_Controller {
 		$this->load->view('join-ihdma',$response);
 	}
 	public function contact_us() {
-		$this->load->view('contactus');
+		$data['countries'] = $this->model->selectWhereData('countries',array(),array('id','name'),false);
+		$this->load->view('contactus',$data);
 	}
 	public function submit_enquiry_form() {
         // Set rules for validation
@@ -307,21 +303,16 @@ class Website extends CI_Controller {
         $this->form_validation->set_rules('pincode', 'Pincode', 'required|numeric|min_length[4]|max_length[6]');
         $this->form_validation->set_rules('w3review', 'Message', 'trim');
 
-        if ($this->form_validation->run() == FALSE) {
-            // Validation failed – return errors as JSON
-            $errors = array(
-                'fullname_error' => form_error('fullname'),
-                'phone_error' => form_error('phone'),
-                'email_error' => form_error('email'),
-                'address_error' => form_error('address'),
-                'city_error' => form_error('city'),
-                'state_error' => form_error('state'),
-                'country_error' => form_error('country'),
-                'pincode_error' => form_error('pincode'),
-                'w3review_error' => form_error('w3review'),
-            );
-            echo json_encode(['status' => false, 'errors' => $errors]);
-        } else {
+        if ($this->form_validation->run() === FALSE) {
+			$errors = [];
+			foreach ($_POST as $key => $value) {
+				if (form_error($key)) {
+					$errors[$key] = strip_tags(form_error($key));
+				}
+			}
+			echo json_encode(['status' => 'error', 'errors' => $errors]);
+			return;
+		}else{
 			$fullname = $this->input->post('fullname');
 			$phone = $this->input->post('phone');
 			$email = $this->input->post('email');

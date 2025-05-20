@@ -59,6 +59,7 @@ $(document).ready(function () {
                                 } else {
                                     alert(response.message);
                                     $('#registerForm')[0].reset();
+                                     window.location.reload();
                                 }
                             }
                         });
